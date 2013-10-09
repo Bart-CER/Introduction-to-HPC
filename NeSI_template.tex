@@ -64,14 +64,14 @@
 
 \title{Introduction to HPC Workshop}
 %\subtitle{Computational Science team}
-\author{NeSI Computational Science Team \\(support@nesi.org.nz)}
+\author{Center for e-Research \\(eresearch@nesi.org.nz)}
 \date{}
 
 
 \begin{document}
 
 {
-\setbeamertemplate{background canvas}{\includegraphics[height=0.99\paperheight]{NeSI_img/Slide00.png}} 
+%\setbeamertemplate{background canvas}{\includegraphics[height=0.99\paperheight]{NeSI_img/Slide00.png}} 
 \begin{frame}[plain]
 \vspace{1cm}
 \titlepage
@@ -92,10 +92,16 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \section{About Us}
-\subsection{About NeSI}
+\subsection{About CER and NeSI}
 \frame[t]
 {
   \frametitle{About Us}
+     \begin{block}{CER: Center for e-Research}
+   \begin{itemize}%[<+-| alert@+>]
+	\item Part of the University of Auckland
+	\item User support and system maintenance 
+   \end{itemize}
+  \end{block}
    \begin{block}{NeSI : New Zealand eScience Infrastructure}
    \begin{itemize}%[<+-| alert@+>]
 	\item \textbf{NeSI} provides
@@ -124,13 +130,13 @@
 \end{center}
 }
 
-\subsection{NeSI CS Team}
+\subsection{The CS Team}
 \frame[t]
 {
   \frametitle{About Us}
       \begin{block}{Computational Science Team}
    \begin{itemize}%[<+-| alert@+>]
-	\item NeSI's team support researchers to get the most out of our platforms and services.
+	\item We support researchers to get the most out of our platforms and services.
 	\item The CS Team has a lot of experience in HPC that spans many science domains.
 	\item Collaboratively enhance the performance of research software codes.
    \begin{itemize}
@@ -138,7 +144,6 @@
 	\item Connect researchers and scientific software experts.
 	\item The team is available to support researchers across any research institution in New Zealand.
    \end{itemize}
-	\item More information at \\ {\footnotesize \url{https://www.nesi.org.nz/computational-science-team}}.
    \end{itemize}
   \end{block}
 }
@@ -148,7 +153,7 @@
   \frametitle{About Us}
       \begin{block}{Support}
    \begin{itemize}%[<+-| alert@+>]
-	\item Email \url{support@nesi.org.nz}
+	\item Email \url{eresearch@nesi.org.nz}
 	\item Creates a support ‘ticket’ where we can track the history of your request
 	\item You can also arrange to meet us to discuss any issues
    \end{itemize}
@@ -177,100 +182,6 @@
 	\item We can install and study the scalability in all the NeSI resources and find the most suitable environment for your case.
 	\item See NeSI website for facility specs and application details.
    \end{itemize}
-  \end{block}
-}
-
-\frame[t]
-{
-  \frametitle{Our Facilities}
-      \begin{block}{BlueFern Supercomputing Center}
-   \begin{itemize}%[<+-| alert@+>]
-	\item Funded by the \textbf{BlueFern, University of Canterbury} with co-investment from the NZ Government through \textbf{NeSI}.
-	\item Currently have 8612 CPU cores across 2061 hosts.
-	\item About 9.6 TB of memory and 71.4 TFLOPS (distributed).
-	\item Shared storage of 172 TB with a 3D Torus interconnect and IB network.
-	\item Linux SLES 11SP2 and AIX
-   \end{itemize}
-  \end{block}
-}
-
-
-\frame[t]
-{
-  \frametitle{Our Facilities}
-      \begin{block}{NeSI BlueFern Supercomputing Center}
-      \begin{center}
-       \begin{small}
-      \begin{tabular}{|c|c|c|}
-      \hline 
-      \textbf{Architecture} & \textbf{BlueGene/P} & \textbf{Power7} \\ 
-      \hline 
-      Model & PowerPC 450 & P755  \\ 
-      \hline 
-      Clock Speed & 0.8 GHz & 3.3 GHz  \\ 
-      \hline 
-      Cache & 8MB & 32MB  \\ 
-      \hline 
-      Cores/socket & 4 & 8  \\ 
-      \hline       
-      Cores/node & 4 & 32  \\ 
-      \hline 
-      Mem/node & 4GB & 128GB  \\ 
-      \hline 
-      GFLOPS/node & 13.6 &  422.4 \\ 
-      \hline 
-      \# nodes & 2048 & 13  \\ 
-      \hline 
-      \end{tabular} 
-      \end{small}
-      \end{center}
-  \end{block}
-}
-
-
-\frame[t]
-{
-  \frametitle{Our Facilities}
-      \begin{block}{NIWA Supercomputing Center}
-   \begin{itemize}%[<+-| alert@+>]
-	\item Funded by the \textbf{NIWA} with co-investment from the NZ Government through \textbf{NeSI}.
-	\item Currently have 3488 CPU cores across 109 hosts.
-	\item About 8.7 TB of memory and 65.57 TFLOPS (distributed).
-	\item Shared storage of 200 TB with a 40 Gbit/s Infiniband network.
-	\item  AIX
-   \end{itemize}
-  \end{block}
-}
-
-\frame[t]
-{
-  \frametitle{Our Facilities}
-      \begin{block}{NIWA Supercomputing Center (FitzRoy \& Barometer)}
-      \begin{center}
-       \begin{small}
-      \begin{tabular}{|c|c|c|}
-      \hline 
-      \textbf{Architecture} & \textbf{Power6}  & \textbf{Power6}\\ 
-      \hline 
-      Model & P575 &  P575 \\ 
-      \hline 
-      Clock Speed & 4.7 GHz &  4.7GHz  \\ 
-      \hline 
-      Cache & 32MB & 32MB  \\ 
-      \hline 
-      Cores/socket & 16 & 16  \\ 
-      \hline       
-      Cores/node & 32 &  32 \\ 
-      \hline 
-      Mem/node & 64,128GB & 64GB  \\ 
-      \hline 
-      GFLOPS/node & 601.6 &  601.6 \\ 
-      \hline 
-      \# nodes & 94  & 15 \\ 
-      \hline 
-      \end{tabular} 
-      \end{small}
-      \end{center}
   \end{block}
 }
 
@@ -535,7 +446,7 @@
   \end{block}
         \begin{block}{Less suited}
    \begin{itemize}%[<+-| alert@+>]
-	\item Windows only software.
+	\item Windows only software (work in progress). 
 	\item Interactive software, e.g.\ GUI, only available for development. 
    \end{itemize}
   \end{block}
@@ -548,10 +459,10 @@
   \frametitle{What to expect}
       \begin{block}{Suitable Work}
    \begin{itemize}%[<+-| alert@+>]
-	\item Some problems are ``embarrassingly parallel'' i.e.\ it is trivial to divide the problem and solve independently.\\e.g. run simulation with 1000 different initial conditions
-	\item Approximately linear speedup
-	\item Other problems have dependencies, they cannot be separated\\e.g. simulate the weather
-	\item Speed up depends what \% of the program runtime can be parallelised
+	\item Some problems are ``embarrassingly parallel'' i.e.\ it is trivial to divide the problem and solve independently.\\e.g. run simulation with 1000 different initial conditions.
+	\item Approximately linear speedup.
+	\item Other problems have dependencies, they cannot be separated\\e.g. simulate the weather.
+	\item Speed up depends what \% of the program runtime can be parallelised.
    \end{itemize}
   \end{block}
 }
@@ -582,17 +493,16 @@
    \begin{itemize}%[<+-| alert@+>]
 	\item Single core computation time: computation only.
 	\item Parallel computation time: computation + communication + waiting.
-	\item E.g.\ writing results (to one file) is often a bottleneck.
+	\item E.g.
+	\begin{itemize}
+	\item writing results (to one file) is often a bottleneck.
 	\item Small problem on many cores: communication cost will dominate.
 	\item Unbalanced load: one core will mainly wait on the other.
+	\end{itemize}
 	\item Conclusion: Test which number of cores is best suited for your problem. 
    \end{itemize}
   \end{block}
-     \begin{block}{Conclusion}
-   \begin{itemize}%[<+-| alert@+>]
-	\item Test which number of cores is best suited for your problem. 
-   \end{itemize}
-  \end{block}
+
 }
 
 
@@ -637,6 +547,11 @@
   \frametitle{Using the Cluster}
   \begin{block}{Each NeSI Supercomputing Center has one or more Login Nodes}
    \begin{itemize}%[<+-| alert@+>]
+	\item \textbf{CeR}
+	   \begin{itemize}%[<+-| alert@+>]
+	    \item {\url{login.uoa.nesi.org.nz}} which is the RHEL linux login node.
+	    %\item visual.uoa.nesi.org.nz  which is the Visualization Cluster login node.
+       \end{itemize}
 	\item \textbf{Bluefern}
 	   \begin{itemize}%[<+-| alert@+>]
 	    \item \url{kerr.canterbury.ac.nz} which is the AIX unix login node.
@@ -648,11 +563,6 @@
 	   \begin{itemize}%[<+-| alert@+>]
 	    \item {\url{fitzroy.nesi.org.nz}} which is the AIX unix login node.
       \end{itemize}
-	\item \textbf{CeR}
-	   \begin{itemize}%[<+-| alert@+>]
-	    \item {\url{login.uoa.nesi.org.nz}} which is the RHEL linux login node.
-	    %\item visual.uoa.nesi.org.nz  which is the Visualization Cluster login node.
-       \end{itemize}
    \end{itemize}
   \end{block}
 }
@@ -1000,12 +910,13 @@ cp -pr $SCRATCH_DIR $HOME/OUT/lammps/
 	\item We have many specialised software packages.
 	\item Best way to see what we have is by checking the wiki. %running module avail on the login node
 	\item The Wiki also has a software section
-	\item We can install software that you need, but …
+	\item We can install software that you need:
    \begin{itemize}%[<+-| alert@+>]
-	\item It must run on Linux
-	\item It must run in batch mode – no user interaction
-	\item You must have the required licenses
-	\item You can install software in your home directory if it is really esoteric
+	\item Linux version of the software.
+	\item Command line mode without user interaction.
+	\item Interaction possible for small tests on the build nodes. 
+	\item We don't provide licenses.
+	\item You can install software in your home directory if it is really esoteric.
    \end{itemize}
    \end{itemize}
   \end{block}
@@ -1021,9 +932,8 @@ cp -pr $SCRATCH_DIR $HOME/OUT/lammps/
 	\item Share with us a short test and we will study the scalability of your application.
 	\item Try to be accurate  with the walltime, it will help to the LL to schedule the jobs better.
 	\item Be aware that you are sharing resources with other researchers.
-	\item If you need to run a test for a long time (>2h) use tLL.
 	\item A wrong memory request or a wrong job description setup can potentially affect others.
-	\item If we find some case like that, we may be forced to cancel the job with this behaviour and inform the owner by email.
+	\item If we find some case like that, we may be forced to cancel the job with this behavior and inform the owner by email.
    \end{itemize}
   \end{block}
 }
