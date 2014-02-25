@@ -25,7 +25,7 @@
 \setbeamercolor{block body alerted}{bg=white,fg=black}
 \setbeamercolor{alerted text}{bg=white,fg=black}
 
-\setbeameroption{show notes}
+%\setbeameroption{show notes}
 
 \setbeamerfont{title}{size=\huge}
 \frenchspacing
@@ -163,113 +163,6 @@
   \end{block}
 }
 
-\subsection{Our Facilities}
-\frame[t]
-{
-  \frametitle{Our Facilities}
-      \begin{block}{NeSI Facilities}
-   \begin{itemize}%[<+-| alert@+>]
-	\item NeSI provides several kind of HPC architectures and solutions to cater for various needs.
-     \begin{itemize}
-     	\item Bluegene/P
-	    \item Power6 and Power7
-   		\item Intel Westmere
-		\item Intel SandyBridge
-		\item Kepler and Fermi GPU servers
-		\item Intel Xeon Phi Co-Processor
-   \end{itemize}
-	\item Supported applications can run on across several NeSI architectures.% but for some of them there are more suitable architecture.
-	\item We can install and study the scalability in all the NeSI resources and find the most suitable environment for your case.
-	\item See NeSI website for facility specs and application details.
-   \end{itemize}
-  \end{block}
-}
-
-\frame[t]
-{
-  \frametitle{Our Facilities}
-      \begin{block}{NeSI CeR Supercomputing Center}
-   \begin{itemize}%[<+-| alert@+>]
-	\item funded by the \textbf{University of Auckland}, \textbf{Landcare Research} and the \textbf{University of Otago} with co-investment from the NZ Government through \textbf{NeSI}.
-	\item Currently have around 5,000 Intel CPU cores across about 300 hosts.
-	\item About 35 TB of memory and 80 TFLOPS (distributed).
-	\item Shared storage of 200 TB with a 40 Gbit/s Infiniband network.
-	\item Linux RHEL 6.3
-   \end{itemize}
-  \end{block}
-}
-
-
-\frame[t]
-{
-  \frametitle{Our Facilities}
-      \begin{block}{NeSI Pan Cluster}
-      \begin{center}
-       \begin{small}
-      \begin{tabular}{|c|c|c|c|}
-      \hline 
-      \textbf{Architecture} & \textbf{Westmere} & \textbf{SandyBridge} & \textbf{LargeMem} \\ 
-      \hline 
-      Model & X5660 & E5-2680 & E7-4870 \\ 
-      \hline 
-      Clock Speed & 2.8 GHz & 2.7 GHz & 2.4GHz \\ 
-      \hline 
-      Cache & 12MB & 20MB & 30MB \\ 
-      \hline 
-      Intel QPI speed & 6.4GT/s & 8 GT/s & 6.4GT/ \\ 
-      \hline 
-      Cores/socket & 6 & 8 & 10 \\ 
-      \hline       
-      Cores/node & 12 & 16 & 40 \\ 
-      \hline 
-      Mem/node & 96GB & 128GB & 512GB \\ 
-      \hline 
-      GFLOPS/node & 134.4 & 345.6 & 384.0 \\ 
-      \hline 
-      \# nodes & 76 & 194 & 4 \\ 
-      \hline 
-      \end{tabular} 
-      \end{small}
-      \end{center}
-  \end{block}
-}
-
-\frame[t]
-{
-  \frametitle{Our Facilities}
-      \begin{block}{NeSI Pan Cluster - Co-Processors}
-      \begin{center}
-       \begin{small}
-      \begin{tabular}{|c|c|c|c|}
-      \hline 
-      \textbf{Architecture} & \textbf{Nvidia Fermi} & \textbf{Nvidia Kepler} & \textbf{Intel Phi} \\ 
-      \hline 
-      Main CPU                  &  X5660/E5-2680       &  E5-2680                   &  E5-2680 \\
-      \hline 
-      Model                       &  M2090                     &   K20X                       &  5110P \\ 
-      \hline 
-      Clock Speed             &  1.3GHz                    &  0.732GHz                      &  1.053GHz\\ 
-      \hline 
-%      Cache                      & 12MB                        & 12MB                          & 12MB  \\ 
-%      \hline  
-%      Intel QPI speed        & 6.4GT/s                   & 6.4GT/s                       & 6.4GT/s  \\ 
-%      \hline 
-      Cores/Dev.             & 512                            & 2688                           & 60 (240) \\ 
-      \hline       
-      Dev./node              &  2                             &   2                                &  2  \\ 
-      \hline 
-      Mem/Dev.             & 6GB                          & 6GB                               & 8GB  \\ 
-      \hline 
-      TFLOPS/Dev         & 1.33                          & 1.17                              & 1.01 \\ 
-      \hline 
-      \# nodes               & 16                             & 5                                 & 2 \\ 
-      \hline 
-      \end{tabular} 
-      \end{small}
-      \end{center}
-  \end{block}
-}
-
 
 
 
@@ -278,30 +171,39 @@
 \frame[t]
 {
   \frametitle{Key Concepts}
-      \begin{block}{What is a cluster}
-   \begin{itemize}%[<+-| alert@+>]
-	\item A cluster is a network of computers, sometimes called nodes or hosts.
-	\item Each computer has several processors.
-	\item Each processor has several cores.
-	\item A core does the computing.
-	\item If your application uses more than one core, it can run faster on our cluster.
-   \end{itemize}
-  \end{block}
+  \begin{columns}[onlytextwidth]
+   
+  \begin{column}{0.6\textwidth}
+  
+	  \begin{block}{What is a cluster}
+      \begin{itemize}%[<+-| alert@+>]
+	    \item A cluster is a network of computers, sometimes called nodes or hosts.
+	    \item Each computer has several processors.
+	    \item Each processor has several cores.
+	    \item A core does the computing.
+	    \item If your application uses more than one core, it can run faster on our cluster.
+      \end{itemize}
+      \end{block}
+      \end{column}
+      \begin{column}{0.4\textwidth}
+      \includegraphics[width=140pt]{NeSI_img/node_view.png}
+      \end{column}
+   \end{columns}
 }
 
-\note{Can the content of the node be changed by the image of the cpu's and the shared memory of a couple of slides further?}
-\frame[t]
-{
-  \frametitle{Key Concepts}
-   \begin{block}{HPC node overview}
-   \begin{center}
- \includegraphics[width=270pt]{NeSI_img/node_view.png}
-   \end{center}
-  \end{block}
-  
-\begin{center}
-\end{center}
-}
+% \note{Can the content of the node be changed by the image of the cpu's and the shared memory of a couple of slides further?}
+% \frame[t]
+% {
+%   \frametitle{Key Concepts}
+%    \begin{block}{HPC node overview}
+%    \begin{center}
+%  \includegraphics[width=270pt]{NeSI_img/node_view.png}
+%    \end{center}
+%   \end{block}
+%   
+% \begin{center}
+% \end{center}
+% }
 
 \subsection{Parallel Programming}
 \frame[t]
@@ -383,26 +285,123 @@
 %  \end{block}
 %}
 
+\section{Our Facilities}
+\subsection{}
+\frame[t]
+{
+  \frametitle{Our Facilities}
+      \begin{block}{NeSI Facilities}
+   \begin{itemize}%[<+-| alert@+>]
+	\item NeSI provides several kind of HPC architectures and solutions to cater for various needs.
+     \begin{itemize}
+     	\item Bluegene/P
+	    \item Power6 and Power7
+   		\item Intel Westmere
+		\item Intel SandyBridge
+		\item Kepler and Fermi GPU servers
+		\item Intel Xeon Phi Co-Processor
+   \end{itemize}
+	\item Supported applications can run on across several NeSI architectures.% but for some of them there are more suitable architecture.
+	\item We can install and study the scalability in all the NeSI resources and find the most suitable environment for your case.
+	\item See NeSI website for facility specs and application details.
+   \end{itemize}
+  \end{block}
+}
+\frame[t]
+{
+  \frametitle{Our Facilities}
+      \begin{block}{NeSI CeR Supercomputing Center}
+   \begin{itemize}%[<+-| alert@+>]
+	\item funded by the \textbf{University of Auckland}, \textbf{Landcare Research} and the \textbf{University of Otago} with co-investment from the NZ Government through \textbf{NeSI}.
+	\item Currently have around 5,000 Intel CPU cores across about 300 hosts.
+	\item About 35 TB of memory and 80 TFLOPS (distributed).
+	\item Shared storage of 200 TB with a 40 Gbit/s Infiniband network.
+	\item Linux RHEL 6.3
+   \end{itemize}
+  \end{block}
+}
 
 \frame[t]
 {
-  \frametitle{Key Concepts}
-      \begin{block}{Useful Quick References}
-        \begin{multicols}{2}
-        \begin{itemize}
-        \item \href{https://wiki.auckland.ac.nz/download/attachments/37950883/vi+Quick+Reference.pdf}{VI Quick Reference}
-        \item \href{https://wiki.auckland.ac.nz/download/attachments/37950883/Bash+Quick+Reference.pdf}{BASH Quick Reference} 
-        \item \href{https://wiki.auckland.ac.nz}{Linux Quick Reference}
-        \item \href{https://wiki.auckland.ac.nz/download/attachments/37950883/OpenMP3.1-FortranCard.pdf}{OpenMP Fortran Syntax}
-        \item \href{https://wiki.auckland.ac.nz/download/attachments/37950883/OpenMP3.1-CCard.pdf}{OpenMP C/C++ Syntax}
-        \item \href{https://wiki.auckland.ac.nz}{MPI Quick Reference}
-        \end{itemize}
-        \end{multicols}
-      \end{block}
+  \frametitle{Our Facilities}
+      \begin{block}{NeSI Pan Cluster}
+      \begin{center}
+       \begin{small}
+      \begin{tabular}{|c|c|c|c|}
+      \hline 
+      \textbf{Architecture} & \textbf{Westmere} & \textbf{SandyBridge} & \textbf{LargeMem} \\ 
+      \hline 
+      Model & X5660 & E5-2680 & E7-4870 \\ 
+      \hline 
+      Clock Speed & 2.8 GHz & 2.7 GHz & 2.4GHz \\ 
+      \hline 
+      Cache & 12MB & 20MB & 30MB \\ 
+      \hline 
+      Intel QPI speed & 6.4GT/s & 8 GT/s & 6.4GT/ \\ 
+      \hline 
+      Cores/socket & 6 & 8 & 10 \\ 
+      \hline       
+      Cores/node & 12 & 16 & 40 \\ 
+      \hline 
+      Mem/node & 96GB & 128GB & 512GB \\ 
+      \hline 
+      GFLOPS/node & 134.4 & 345.6 & 384.0 \\ 
+      \hline 
+      \# nodes & 76 & 194 & 4 \\ 
+      \hline 
+      \end{tabular} 
+      \end{small}
+      \end{center}
+  \end{block}
 }
-      
-      
-\section{Using the Cluster}
+\frame[t]
+{
+  \frametitle{Our Facilities}
+      \begin{block}{NeSI Pan Cluster - Co-Processors}
+      \begin{center}
+       \begin{small}
+      \begin{tabular}{|c|c|c|c|}
+      \hline 
+      \textbf{Architecture} & \textbf{Nvidia Fermi} & \textbf{Nvidia Kepler} & \textbf{Intel Phi} \\ 
+      \hline 
+      Main CPU                  &  X5660/E5-2680       &  E5-2680                   &  E5-2680 \\
+      \hline 
+      Model                       &  M2090                     &   K20X                       &  5110P \\ 
+      \hline 
+      Clock Speed             &  1.3GHz                    &  0.732GHz                      &  1.053GHz\\ 
+      \hline 
+%      Cache                      & 12MB                        & 12MB                          & 12MB  \\ 
+%      \hline  
+%      Intel QPI speed        & 6.4GT/s                   & 6.4GT/s                       & 6.4GT/s  \\ 
+%      \hline 
+      Cores/Dev.             & 512                            & 2688                           & 60 (240) \\ 
+      \hline       
+      Dev./node              &  2                             &   2                                &  2  \\ 
+      \hline 
+      Mem/Dev.             & 6GB                          & 6GB                               & 8GB  \\ 
+      \hline 
+      TFLOPS/Dev         & 1.33                          & 1.17                              & 1.01 \\ 
+      \hline 
+      \# nodes               & 16                             & 5                                 & 2 \\ 
+      \hline 
+      \end{tabular} 
+      \end{small}
+      \end{center}
+  \end{block}
+}
+
+\section{Using the Cluster}      
+\frame[t]
+{
+  \frametitle{Using the Cluster}
+      \begin{block}{Using the cluster}
+\begin{center}
+ \includegraphics[width=310pt]{NeSI_img/NeSI_compute_path.png}
+\end{center}
+  \end{block}
+}
+
+
 
 \frame[t]
 {
@@ -414,6 +413,13 @@
 	\item The login node is not for running jobs, it is only for file management and job submission.
    \end{itemize}
   \end{block}
+  \begin{center}
+ \includegraphics[width=200pt]{NeSI_img/NeSI_compute_path.png}
+\end{center}
+}
+\frame[t]
+{
+  \frametitle{Using the Cluster}
       \begin{block}{Compiling and Testing Software}
    \begin{itemize}%[<+-| alert@+>]
 	\item In each NeSI facility you will find building/development nodes.
@@ -421,22 +427,16 @@
 	\item You can build and test your software and then submit a job.
    \end{itemize}
   \end{block}
-}
-\note{Why are the compute nodes connected with the earth? It's only the login node, and perhaps the build node that have access to the www.}
-\frame[t]
-{
-  \frametitle{Using the Cluster}
-      \begin{block}{Using the cluster}
-\begin{center}
- \includegraphics[width=310pt]{NeSI_img/NeSI_compute_path.png}
+  \begin{center}
+ \includegraphics[width=200pt]{NeSI_img/NeSI_compute_path.png}
 \end{center}
-  \end{block}
 }
+
 
 \subsection{Suitable Work}
 \frame[t]
 {
-  \frametitle{What to Expect}
+  \frametitle{What to expect}
       \begin{block}{Suitable Work}
    \begin{itemize}%[<+-| alert@+>]
 	\item Problems that can be solved with parallel processing.
@@ -738,13 +738,13 @@
       \begin{block}{Setup a Job Description}
 Can use macros in job attributes
 \begin{verbatim}
-e.g. #@ output = $(job_name).$(jobid).out
+e.g. #@ output  = $(job_name).$(jobid).out
 \end{verbatim}
 MPI jobs
 \begin{verbatim}
-#@ job_type = MPICH | parallel
-#@ total_tasks = 16
-#@ blocking = 4 | unlimited
+#@ job_type     = MPICH | parallel
+#@ total_tasks  = 16
+#@ blocking     = 4 | unlimited
 \end{verbatim}
   \end{block}
 
@@ -772,32 +772,31 @@ Specific architectures
   \frametitle{Submitting a Job}
 %      \begin{block}{Job Description Example : SMP}
 \begin{verbatim}
-#!/bin/bash 
-# Optimized for run parallel job of 12 Cores in NeSI (Pandora-westmere)
-##########################################################################
-#@ job_name = Gaussian
-#@ class = default
-#@ notification = never
-#@ group = nesi
-#@ account_no = uoa
-#@ wall_clock_limit = 1:00
-#@ initialdir = $(home)
-#@ output = $(home)/$(job_name).txt
-#@ error = $(home)/$(job_name).err
-#@ job_type = serial
-#@ resources = ConsumableMemory(2048mb) ConsumableVirtualMemory(2048mb)
-#@ parallel_threads = 12
-#@ environment = COPY_ALL,OMP_NUM_THREADS=12
+##########################################################################################
+# for detailed information about LoadLeveler job description files, please visit:
+#    - https://wiki.auckland.ac.nz/display/CERES/NeSI+Pan+Cluster+Job+Submission+Guide
+#    - https://wiki.auckland.ac.nz/display/CERES/LoadLeveler+-+job+submission
+#    - https://wiki.auckland.ac.nz/display/CERES/LoadLeveler+-+example+scripts
+##########################################################################################
+ 
+#@ job_name         = getting_started_job
+#@ class            = default
+#@ group            = nesi
+#@ account_no       = uoa123456
+#@ wall_clock_limit = 00:01:00
+#@ resources        = ConsumableMemory(2048mb) ConsumableVirtualMemory(2048mb)
+#@ job_type         = serial
+#@ output           = $(home)/getting_started/stdout.txt
+#@ error            = $(home)/getting_started/stderr.txt
+#@ notification     = never
 #@ queue
-########################################################################## 
-module load g09/C.01
-cd $SCRATCH_DIR
-cp -r $HOME/Gaussian/h2o_opt.dat . 
-setenv GAUSS_SCRDIR $SCRATCH_DIR
-###  Run the Parallel Program
-g09 < ./h2o_opt.dat > h2ol_opt.log
-###  Transfering the results to the home directory ($HOME) 
-cp -pr $TMP_DIR $HOME/results/
+ 
+ 
+# Enforce memory constraints. Value is in KBlet "limit = 2048 * 1024"
+let "limit = 2048 * 1024"
+ulimit -v ${limit} -m ${limit}
+ 
+cat ~/inputfile.txt
 \end{verbatim}
 %  \end{block}
 \end{frame}
@@ -809,21 +808,21 @@ cp -pr $TMP_DIR $HOME/results/
 #!/bin/bash
 # Optimized for run parallel job of 512 Cores at NeSI (Pandora-SandyBridge)
 ##########################################################################
-#@ job_name = LAMMPS_TEST
-#@ class = default
-#@ group = nesi
-#@ notification = never
-#@ account_no = uoa
+#@ job_name         = LAMMPS_TEST
+#@ class            = default
+#@ group            = nesi
+#@ notification     = never
+#@ account_no       = uoa123456
 #@ wall_clock_limit = 00:30:00
-#@ resources = ConsumableMemory(4096mb) ConsumableVirtualMemory(4096mb)
-#@ job_type = MPICH
-#@ blocking = unlimited
-#@ node_usage = not_shared
-#@ output = $(job_name).$(jobid).out
-#@ error = $(job_name).$(jobid).err
-#@ requirements = (Feature=="sandybridge")
-#@ initialdir = /share/src/LAMMPS/lammps-12Aug13/bench
-#@ total_tasks = 512
+#@ resources        = ConsumableMemory(4096mb) ConsumableVirtualMemory(4096mb)
+#@ job_type         = MPICH
+#@ blocking         = unlimited
+#@ node_usage       = not_shared
+#@ output           = $(job_name).$(jobid).out
+#@ error            = $(job_name).$(jobid).err
+#@ requirements     = (Feature=="sandybridge")
+#@ initialdir       = /share/src/LAMMPS/lammps-12Aug13/bench
+#@ total_tasks      = 512
 #@ queue
 ##########################################################################
 module load lammps/12Aug13-sandybridge

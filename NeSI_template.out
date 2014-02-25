@@ -1,0 +1,23 @@
+\BOOKMARK [2][]{Outline0.1}{About Us}{}% 1
+\BOOKMARK [3][]{Outline0.1.1.3}{About CER and NeSI}{Outline0.1}% 2
+\BOOKMARK [3][]{Outline0.1.2.5}{The CS Team}{Outline0.1}% 3
+\BOOKMARK [2][]{Outline0.2}{Key Concepts}{}% 4
+\BOOKMARK [3][]{Outline0.2.1.7}{What is a Cluster}{Outline0.2}% 5
+\BOOKMARK [3][]{Outline0.2.2.8}{Parallel Programming}{Outline0.2}% 6
+\BOOKMARK [3][]{Outline0.2.3.9}{Shared Memory}{Outline0.2}% 7
+\BOOKMARK [3][]{Outline0.2.4.10}{Distributed Memory}{Outline0.2}% 8
+\BOOKMARK [2][]{Outline0.3}{Our Facilities}{}% 9
+\BOOKMARK [2][]{Outline0.4}{Using the Cluster}{}% 10
+\BOOKMARK [3][]{Outline0.4.1.18}{Suitable Work}{Outline0.4}% 11
+\BOOKMARK [3][]{Outline0.4.2.19}{What to expect}{Outline0.4}% 12
+\BOOKMARK [3][]{Outline0.4.3.20}{Parallel speedup}{Outline0.4}% 13
+\BOOKMARK [3][]{Outline0.4.4.22}{Data}{Outline0.4}% 14
+\BOOKMARK [3][]{Outline0.4.5.23}{Getting to the Login Node}{Outline0.4}% 15
+\BOOKMARK [2][]{Outline0.5}{Submitting a Job}{}% 16
+\BOOKMARK [3][]{Outline0.5.1.26}{Documentation}{Outline0.5}% 17
+\BOOKMARK [3][]{Outline0.5.2.27}{Basic Job Properties}{Outline0.5}% 18
+\BOOKMARK [3][]{Outline0.5.3.29}{Outputs}{Outline0.5}% 19
+\BOOKMARK [3][]{Outline0.5.4.31}{Grisu}{Outline0.5}% 20
+\BOOKMARK [3][]{Outline0.5.5.32}{LoadLeveler}{Outline0.5}% 21
+\BOOKMARK [3][]{Outline0.5.6.40}{Software}{Outline0.5}% 22
+\BOOKMARK [3][]{Outline0.5.7.41}{Best practices and advice}{Outline0.5}% 23

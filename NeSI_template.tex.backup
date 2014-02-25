@@ -25,6 +25,8 @@
 \setbeamercolor{block body alerted}{bg=white,fg=black}
 \setbeamercolor{alerted text}{bg=white,fg=black}
 
+%\setbeameroption{show notes}
+
 \setbeamerfont{title}{size=\huge}
 \frenchspacing
 \hyphenation{NeSI}
@@ -62,14 +64,14 @@
 
 \title{Introduction to HPC Workshop}
 %\subtitle{Computational Science team}
-\author{NeSI Computational Science Team \\(support@nesi.org.nz)}
+\author{Center for e-Research \\(eresearch@nesi.org.nz)}
 \date{}
 
 
 \begin{document}
 
 {
-\setbeamertemplate{background canvas}{\includegraphics[height=0.99\paperheight]{NeSI_img/Slide00.png}} 
+%\setbeamertemplate{background canvas}{\includegraphics[height=0.99\paperheight]{NeSI_img/Slide00.png}} 
 \begin{frame}[plain]
 \vspace{1cm}
 \titlepage
@@ -90,21 +92,25 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \section{About Us}
-\subsection{About NeSI}
+\subsection{About CER and NeSI}
 \frame[t]
 {
   \frametitle{About Us}
+     \begin{block}{CER: Center for e-Research}
+   \begin{itemize}%[<+-| alert@+>]
+	\item Part of the University of Auckland
+	\item User support and system maintenance 
+   \end{itemize}
+  \end{block}
    \begin{block}{NeSI : New Zealand eScience Infrastructure}
    \begin{itemize}%[<+-| alert@+>]
-	\item \textbf{NeSI} provides access to New Zealand’s HPC facilities and support.
-	\item \textbf{NeSI} includes HPC facilities at the \textbf{University of Auckland}, \textbf{NIWA} and the \textbf{University of Canterbury}.
-	\item NZ researchers involved in funded peer reviewed research
+	\item \textbf{NeSI} provides
 	\begin{itemize}
-	\item access to most appropriate site
-	\item access to expert support services
-	\item highest priority in the job queue
-   \end{itemize}
-	\item Collaborator institutions at each site have default access
+		\item high performance computing
+		\item a national data storage and sharing service 
+		\item expert support, including engineering
+		\item single-sign on across the NZ research sector
+	\end{itemize}
    \end{itemize}
   \end{block}
 }
@@ -114,7 +120,7 @@
   \frametitle{About Us}
 \begin{center}
 \vspace*{1cm}
- \includegraphics[width=225pt]{NeSI_img/nesi_logo.png}\\
+ \includegraphics[width=225pt]{NeSI_img/nesi_logo.jpg}\\
  \includegraphics[width=50pt]{NeSI_img/logo-u-of-a.jpg}
  \includegraphics[width=50pt]{NeSI_img/logo-u-of-c.jpg}
  \includegraphics[width=50pt]{NeSI_img/logo-niwa.jpg}
@@ -124,13 +130,13 @@
 \end{center}
 }
 
-\subsection{NeSI CS Team}
+\subsection{The CS Team}
 \frame[t]
 {
   \frametitle{About Us}
       \begin{block}{Computational Science Team}
    \begin{itemize}%[<+-| alert@+>]
-	\item NeSI's team support researchers to get the most out of our platforms and services.
+	\item We support researchers to get the most out of our platforms and services.
 	\item The CS Team has a lot of experience in HPC that spans many science domains.
 	\item Collaboratively enhance the performance of research software codes.
    \begin{itemize}
@@ -138,7 +144,6 @@
 	\item Connect researchers and scientific software experts.
 	\item The team is available to support researchers across any research institution in New Zealand.
    \end{itemize}
-	\item More information at \\ {\footnotesize \url{https://www.nesi.org.nz/computational-science-team}}.
    \end{itemize}
   \end{block}
 }
@@ -148,7 +153,7 @@
   \frametitle{About Us}
       \begin{block}{Support}
    \begin{itemize}%[<+-| alert@+>]
-	\item Email \url{support@nesi.org.nz}
+	\item Email \url{eresearch@nesi.org.nz}
 	\item Creates a support ‘ticket’ where we can track the history of your request
 	\item You can also arrange to meet us to discuss any issues
    \end{itemize}
@@ -158,7 +163,129 @@
   \end{block}
 }
 
-\subsection{Our Facilities}
+
+
+
+\section{Key Concepts}
+\subsection{What is a Cluster}
+\frame[t]
+{
+  \frametitle{Key Concepts}
+  \begin{columns}[onlytextwidth]
+   
+  \begin{column}{0.6\textwidth}
+  
+	  \begin{block}{What is a cluster}
+      \begin{itemize}%[<+-| alert@+>]
+	    \item A cluster is a network of computers, sometimes called nodes or hosts.
+	    \item Each computer has several processors.
+	    \item Each processor has several cores.
+	    \item A core does the computing.
+	    \item If your application uses more than one core, it can run faster on our cluster.
+      \end{itemize}
+      \end{block}
+      \end{column}
+      \begin{column}{0.4\textwidth}
+      \includegraphics[width=140pt]{NeSI_img/node_view.png}
+      \end{column}
+   \end{columns}
+}
+
+% \note{Can the content of the node be changed by the image of the cpu's and the shared memory of a couple of slides further?}
+% \frame[t]
+% {
+%   \frametitle{Key Concepts}
+%    \begin{block}{HPC node overview}
+%    \begin{center}
+%  \includegraphics[width=270pt]{NeSI_img/node_view.png}
+%    \end{center}
+%   \end{block}
+%   
+% \begin{center}
+% \end{center}
+% }
+
+\subsection{Parallel Programming}
+\frame[t]
+{
+  \frametitle{Key Concepts}
+      \begin{block}{Parallel Programming}
+   \begin{itemize}%[<+-| alert@+>]
+	\item There are several ways to make a program use more cores and hence run faster.
+	\item Many scientific software applications will be able to use multiple cores in some way. But this is often done explicitly by the user, not automagically.
+	\item We can help you improve the performance of your code or make better use of your application.
+   \end{itemize}
+  \end{block}
+}
+
+\subsection{Shared Memory}
+\frame[t]
+{
+  \frametitle{Key Concepts}
+      \begin{block}{Shared Memory}
+   \begin{itemize}%[<+-| alert@+>]
+	\item Symmetric multiprocessing (SMP) : two or more identical processors are connected to a single shared main memory.
+	\item This shared memory may be simultaneously accessed by single program using multiple threads.
+	\item There are different frameworks for utilizing SMP capabilities.
+   \end{itemize}
+\begin{center}
+ \includegraphics[width=90pt]{NeSI_img/shared_mem.png}
+\end{center}
+  \end{block}
+}
+
+%\frame[t]
+%{
+%  \frametitle{Key Concepts}
+%      \begin{block}{Shared Memory : OpenMP}
+%       \begin{itemize}%[<+-| alert@+>]
+%	\item A master thread forks a specified number of slave threads and a task is divided among them. 
+%	\item After the execution of the parallelized code, the threads join back into the master thread.
+%	%\item Both task parallelism and data parallelism can be achieved using OpenMP in this way.
+%   \end{itemize}
+%\begin{center}
+% \includegraphics[width=250pt]{NeSI_img/800px-Fork_join.png}
+%\end{center}
+%  \end{block}
+%}
+
+
+\subsection{Distributed Memory}
+
+\frame[t]
+{
+  \frametitle{Key Concepts}
+      \begin{block}{Distributed Memory}
+   \begin{itemize}%[<+-| alert@+>]
+	\item Multiple-processor computer system in which each process has its own private memory. 
+	\item Computational tasks can only operate on local data.
+	\item If remote data is required, the computational task must communicate with one or more remote processors.
+	\item The most popular parallel programming paradigm is MPI.
+   \end{itemize}
+\begin{center}
+ %\includegraphics[width=120pt]{NeSI_img/parallel_paradigm/distributed_mem.png}
+ \includegraphics[width=150pt]{NeSI_img/hybrid_mem.png}
+\end{center}
+  \end{block}
+}
+
+
+%\frame[t]
+%{
+%  \frametitle{Key Concepts}
+%      \begin{block}{Hybrid Case : MPI+OpenMP}
+%   \begin{itemize}%[<+-| alert@+>]
+%	\item The application opens several MPI instances (one or more in each node) 
+%	\item Each MPI instance runs OpenMP threads
+%	\item Typically one MPI instance per Socket and one OpenMP Thread per core.
+%   \end{itemize}
+%\begin{center}
+% \includegraphics[width=170pt]{NeSI_img/hybrid_mem.png}
+%\end{center}
+%  \end{block}
+%}
+
+\section{Our Facilities}
 \frame[t]
 {
   \frametitle{Our Facilities}
@@ -177,100 +304,6 @@
 	\item We can install and study the scalability in all the NeSI resources and find the most suitable environment for your case.
 	\item See NeSI website for facility specs and application details.
    \end{itemize}
-  \end{block}
-}
-
-\frame[t]
-{
-  \frametitle{Our Facilities}
-      \begin{block}{BlueFern Supercomputing Center}
-   \begin{itemize}%[<+-| alert@+>]
-	\item Funded by the \textbf{BlueFern, University of Canterbury} with co-investment from the NZ Government through \textbf{NeSI}.
-	\item Currently have 8612 CPU cores across 2061 hosts.
-	\item About 9.6 TB of memory and 71.4 TFLOPS (distributed).
-	\item Shared storage of 172 TB with a 3D Torus interconnect and IB network.
-	\item Linux SLES 11SP2 and AIX
-   \end{itemize}
-  \end{block}
-}
-
-
-\frame[t]
-{
-  \frametitle{Our Facilities}
-      \begin{block}{NeSI BlueFern Supercomputing Center}
-      \begin{center}
-       \begin{small}
-      \begin{tabular}{|c|c|c|}
-      \hline 
-      \textbf{Architecture} & \textbf{BlueGene/P} & \textbf{Power7} \\ 
-      \hline 
-      Model & PowerPC 450 & P755  \\ 
-      \hline 
-      Clock Speed & 0.8 GHz & 3.3 GHz  \\ 
-      \hline 
-      Cache & 8MB & 32MB  \\ 
-      \hline 
-      Cores/socket & 4 & 8  \\ 
-      \hline       
-      Cores/node & 4 & 32  \\ 
-      \hline 
-      Mem/node & 4GB & 128GB  \\ 
-      \hline 
-      GFLOPS/node & 13.6 &  422.4 \\ 
-      \hline 
-      \# nodes & 2048 & 13  \\ 
-      \hline 
-      \end{tabular} 
-      \end{small}
-      \end{center}
-  \end{block}
-}
-
-
-\frame[t]
-{
-  \frametitle{Our Facilities}
-      \begin{block}{NIWA Supercomputing Center}
-   \begin{itemize}%[<+-| alert@+>]
-	\item Funded by the \textbf{NIWA} with co-investment from the NZ Government through \textbf{NeSI}.
-	\item Currently have 3488 CPU cores across 109 hosts.
-	\item About 8.7 TB of memory and 65.57 TFLOPS (distributed).
-	\item Shared storage of 200 TB with a 40 Gbit/s Infiniband network.
-	\item  AIX
-   \end{itemize}
-  \end{block}
-}
-
-\frame[t]
-{
-  \frametitle{Our Facilities}
-      \begin{block}{NIWA Supercomputing Center (FitzRoy \& Barometer)}
-      \begin{center}
-       \begin{small}
-      \begin{tabular}{|c|c|c|}
-      \hline 
-      \textbf{Architecture} & \textbf{Power6}  & \textbf{Power6}\\ 
-      \hline 
-      Model & P575 &  P575 \\ 
-      \hline 
-      Clock Speed & 4.7 GHz &  4.7GHz  \\ 
-      \hline 
-      Cache & 32MB & 32MB  \\ 
-      \hline 
-      Cores/socket & 16 & 16  \\ 
-      \hline       
-      Cores/node & 32 &  32 \\ 
-      \hline 
-      Mem/node & 64,128GB & 64GB  \\ 
-      \hline 
-      GFLOPS/node & 601.6 &  601.6 \\ 
-      \hline 
-      \# nodes & 94  & 15 \\ 
-      \hline 
-      \end{tabular} 
-      \end{small}
-      \end{center}
   \end{block}
 }
 
@@ -359,138 +392,17 @@
   \end{block}
 }
 
-
-
-
-\section{Key Concepts}
-\subsection{What is a Cluster}
-\frame[t]
-{
-  \frametitle{Key Concepts}
-      \begin{block}{What is a cluster}
-   \begin{itemize}%[<+-| alert@+>]
-	\item A cluster is a network of computers, sometimes called nodes or hosts.
-	\item Each computer has several processors.
-	\item Each processor has several cores.
-	\item A core does the computing.
-	\item If your application uses more than one core, it can run faster on our cluster.
-   \end{itemize}
-  \end{block}
-}
-
-
-\frame[t]
-{
-  \frametitle{Key Concepts}
-   \begin{block}{HPC node overview}
-   \begin{center}
- \includegraphics[width=270pt]{NeSI_img/node_view.png}
-   \end{center}
-  \end{block}
-  
-\begin{center}
-\end{center}
-}
-
-\subsection{Parallel Programming}
-\frame[t]
-{
-  \frametitle{Key Concepts}
-      \begin{block}{Parallel Programming}
-   \begin{itemize}%[<+-| alert@+>]
-	\item There are several ways to make a program use more cores and hence run faster.
-	\item Many scientific software applications will be able to use multiple cores in some way. But this is often done explicitly by the user, not automagically.
-	\item We can help you improve the performance of your code or make better use of your application.
-   \end{itemize}
-  \end{block}
-}
-
-\subsection{Shared Memory}
-\frame[t]
-{
-  \frametitle{Key Concepts}
-      \begin{block}{Shared Memory}
-   \begin{itemize}%[<+-| alert@+>]
-	\item Symmetric multiprocessing (SMP) : two or more identical processors are connected to a single shared main memory.
-	\item This shared memory may be simultaneously accessed by single program using multiple threads.
-	\item There are different frameworks for utilizing SMP capabilities.
-   \end{itemize}
-\begin{center}
- \includegraphics[width=90pt]{NeSI_img/shared_mem.png}
-\end{center}
-  \end{block}
-}
-
-%\frame[t]
-%{
-%  \frametitle{Key Concepts}
-%      \begin{block}{Shared Memory : OpenMP}
-%       \begin{itemize}%[<+-| alert@+>]
-%	\item A master thread forks a specified number of slave threads and a task is divided among them. 
-%	\item After the execution of the parallelized code, the threads join back into the master thread.
-%	%\item Both task parallelism and data parallelism can be achieved using OpenMP in this way.
-%   \end{itemize}
-%\begin{center}
-% \includegraphics[width=250pt]{NeSI_img/800px-Fork_join.png}
-%\end{center}
-%  \end{block}
-%}
-
-
-\subsection{Distributed Memory}
-
-\frame[t]
-{
-  \frametitle{Key Concepts}
-      \begin{block}{Distributed Memory}
-   \begin{itemize}%[<+-| alert@+>]
-	\item Multiple-processor computer system in which each process has its own private memory. 
-	\item Computational tasks can only operate on local data.
-	\item If remote data is required, the computational task must communicate with one or more remote processors.
-	\item The most popular parallel programming paradigm is MPI.
-   \end{itemize}
-\begin{center}
- %\includegraphics[width=120pt]{NeSI_img/parallel_paradigm/distributed_mem.png}
- \includegraphics[width=150pt]{NeSI_img/hybrid_mem.png}
-\end{center}
-  \end{block}
-}
-
-
-%\frame[t]
-%{
-%  \frametitle{Key Concepts}
-%      \begin{block}{Hybrid Case : MPI+OpenMP}
-%   \begin{itemize}%[<+-| alert@+>]
-%	\item The application opens several MPI instances (one or more in each node) 
-%	\item Each MPI instance runs OpenMP threads
-%	\item Typically one MPI instance per Socket and one OpenMP Thread per core.
-%   \end{itemize}
-%\begin{center}
-% \includegraphics[width=170pt]{NeSI_img/hybrid_mem.png}
-%\end{center}
-%  \end{block}
-%}
-
-
-\frame[t]
-{
-  \frametitle{Key Concepts}
-      \begin{block}{Useful Quick References}
-        \begin{multicols}{2}
-        \begin{itemize}
-        \item \href{https://wiki.auckland.ac.nz/download/attachments/37950883/vi+Quick+Reference.pdf}{VI Quick Reference}
-        \item \href{https://wiki.auckland.ac.nz/download/attachments/37950883/Bash+Quick+Reference.pdf}{BASH Quick Reference} 
-        \item \href{https://wiki.auckland.ac.nz}{Linux Quick Reference}
-        \item \href{https://wiki.auckland.ac.nz/download/attachments/37950883/OpenMP3.1-FortranCard.pdf}{OpenMP Fortran Syntax}
-        \item \href{https://wiki.auckland.ac.nz/download/attachments/37950883/OpenMP3.1-CCard.pdf}{OpenMP C/C++ Syntax}
-        \item \href{https://wiki.auckland.ac.nz}{MPI Quick Reference}
-        \end{itemize}
-        \end{multicols}
-      \end{block}
-}
       
-      
+\frame[t]
+{
+  \frametitle{Using the Cluster}
+      \begin{block}{Using the cluster}
+\begin{center}
+ \includegraphics[width=310pt]{NeSI_img/NeSI_compute_path.png}
+\end{center}
+  \end{block}
+}
+
 \section{Using the Cluster}
 
 \frame[t]
@@ -503,6 +415,13 @@
 	\item The login node is not for running jobs, it is only for file management and job submission.
    \end{itemize}
   \end{block}
+  \begin{center}
+ \includegraphics[width=200pt]{NeSI_img/NeSI_compute_path.png}
+\end{center}
+}
+\frame[t]
+{
+  \frametitle{Using the Cluster}
       \begin{block}{Compiling and Testing Software}
    \begin{itemize}%[<+-| alert@+>]
 	\item In each NeSI facility you will find building/development nodes.
@@ -510,32 +429,26 @@
 	\item You can build and test your software and then submit a job.
    \end{itemize}
   \end{block}
+  \begin{center}
+ \includegraphics[width=200pt]{NeSI_img/NeSI_compute_path.png}
+\end{center}
 }
 
-\frame[t]
-{
-  \frametitle{Using the Cluster}
-      \begin{block}{Using the cluster}
-\begin{center}
- \includegraphics[width=310pt]{NeSI_img/NeSI_compute_path.png}
-\end{center}
-  \end{block}
-}
 
 \subsection{Suitable Work}
 \frame[t]
 {
-  \frametitle{What to Expect}
+  \frametitle{What to expect}
       \begin{block}{Suitable Work}
    \begin{itemize}%[<+-| alert@+>]
-	\item Problems that can be solved with parallel processing
-	\item Problems that consume large amounts of memory
-	\item Problems that render your desktop useless for long periods of time
+	\item Problems that can be solved with parallel processing.
+	\item Problems that consume large amounts of memory.
+	\item Problems that render your desktop useless for long periods of time.
    \end{itemize}
   \end{block}
         \begin{block}{Less suited}
    \begin{itemize}%[<+-| alert@+>]
-	\item Windows only software (Work in progress)
+	\item Windows only software (work in progress). 
 	\item Interactive software, e.g.\ GUI, only available for development. 
    \end{itemize}
   \end{block}
@@ -548,15 +461,15 @@
   \frametitle{What to expect}
       \begin{block}{Suitable Work}
    \begin{itemize}%[<+-| alert@+>]
-	\item Some problems are ``embarrassingly parallel'' i.e.\ it is trivial to divide the problem and solve independently.\\e.g. run simulation with 1000 different initial conditions
-	\item Approximately linear speedup
-	\item Other problems have dependencies, they cannot be separated\\e.g. simulate the weather
-	\item Speed up depends what \% of the program runtime can be parallelised
+	\item Some problems are ``embarrassingly parallel'' i.e.\ it is trivial to divide the problem and solve independently.\\e.g. run simulation with 1000 different initial conditions.
+	\item Approximately linear speedup.
+	\item Other problems have dependencies, they cannot be separated\\e.g. simulate the weather.
+	\item Speed up depends what \% of the program runtime can be parallelised.
    \end{itemize}
   \end{block}
 }
 
-\subsection{Amdahl's Law}
+\subsection{Parallel speedup}
 
 \frame[t]
 {
@@ -578,15 +491,20 @@
 
 \frame[t]
 {
-   \begin{block}{Amdahl's Law}
+   \begin{block}{Parallel execution time}
    \begin{itemize}%[<+-| alert@+>]
 	\item Single core computation time: computation only.
 	\item Parallel computation time: computation + communication + waiting.
+	\item E.g.
+	\begin{itemize}
+	\item writing results (to one file) is often a bottleneck.
 	\item Small problem on many cores: communication cost will dominate.
 	\item Unbalanced load: one core will mainly wait on the other.
+	\end{itemize}
 	\item Conclusion: Test which number of cores is best suited for your problem. 
    \end{itemize}
   \end{block}
+
 }
 
 
@@ -596,11 +514,12 @@
   \frametitle{Using the Cluster}
       \begin{block}{Data}
    \begin{itemize}%[<+-| alert@+>]
-	\item You need to upload data to the login node for use on the cluster
-	\item Home directory has limited quota space, but more can be requested.
-	\item Not an archive or long term storage
-	\item Backup important data elsewhere and download results after your job is finished
-	\item Files on the login node are shared across to the build and compute nodes
+	\item Upload input data to the login node for use on the cluster.
+	\item Download results from the login node to your local drive. 
+	\item The home directory has a rather small quota, project directories can be larger.
+	\item For long term storage and back-up, ask your IT department.
+	\item Things do go wrong, make sure to have a back-up.
+	\item Files on the login node are shared across the build and compute nodes
    \end{itemize}
 %   \begin{center}
 %   \includegraphics[width=125pt]{NeSI_img/kami23-doubtux.png}
@@ -613,14 +532,14 @@
 \frame[t]
 {
   \frametitle{Using the Cluster}
-      \begin{block}{Suggested Terminal Clients}
-      Each terminal client has it's own way of using the Secure Shell (SSH) protocol
+      \begin{block}{Connection via SSH}
+      Each terminal client has its own way of using the Secure Shell (SSH) protocol
         \begin{itemize}
         \item Windows: \href{http://mobaxterm.mobatek.net/}{mobaxterm}
         \item MacOSX: Terminal(Included in the OS), \href{http://www.iterm2.com/}{iTerm2}
         \item Linux: \href{http://konsole.kde.org/}{Konsole}, GnomeTerminal, \href{http://yakuake.kde.org/}{yakuake}
         \end{itemize}
-        On Unix based systems you need to do something like:\\ssh myuserid@LOGINNODE
+        On Unix based systems you need to do something like:\\ssh \url{jbon007@login.nesi.org.nz}
       \end{block}
 }
 
@@ -630,22 +549,22 @@
   \frametitle{Using the Cluster}
   \begin{block}{Each NeSI Supercomputing Center has one or more Login Nodes}
    \begin{itemize}%[<+-| alert@+>]
+	\item \textbf{CeR}
+	   \begin{itemize}%[<+-| alert@+>]
+	    \item {\url{login.uoa.nesi.org.nz}} which is the RHEL linux login node.
+	    %\item visual.uoa.nesi.org.nz  which is the Visualization Cluster login node.
+       \end{itemize}
 	\item \textbf{Bluefern}
 	   \begin{itemize}%[<+-| alert@+>]
-	    \item kerr.canterbury.ac.nz which is the AIX unix login node.
-	    \item beatrice.canterbury.ac.nz which is the SUSE linux login node.
-	    \item foster.canterbury.ac.nz which is the BlueGene/P login node
-	    \item popper.canterbury.ac.nz which is the Visualization Cluster login node.
+	    \item \url{kerr.canterbury.ac.nz} which is the AIX unix login node.
+	    \item {\url{beatrice.canterbury.ac.nz}} which is the SUSE linux login node.
+	    \item {\url{foster.canterbury.ac.nz}} which is the BlueGene/P login node
+	    \item {\url{popper.canterbury.ac.nz}} which is the Visualization Cluster login node.
    \end{itemize}
    	\item \textbf{NIWA}
 	   \begin{itemize}%[<+-| alert@+>]
-	    \item fitzroy.nesi.org.nz which is the AIX unix login node.
+	    \item {\url{fitzroy.nesi.org.nz}} which is the AIX unix login node.
       \end{itemize}
-	\item \textbf{CeR}
-	   \begin{itemize}%[<+-| alert@+>]
-	    \item login.uoa.nesi.org.nz which is the RHEL Linux login node.
-	    %\item visual.uoa.nesi.org.nz  which is the Visualization Cluster login node.
-       \end{itemize}
    \end{itemize}
   \end{block}
 }
@@ -656,12 +575,12 @@
       \begin{block}{Remote File System Access}
        In order to access the file system (/home) remotely from your machine, we recommend:
         \begin{itemize}
-        \item \textbf{Konqueror} (KDE) : type fish://user@host:port
-        \item \textbf{Nautilus} (Gnome) : type sftp://user@host:port
-        \item \textbf{mobaxterm} (Windows) : \href{http://mobaxterm.mobatek.net/}{mobaxterm}
-        \item \textbf{SSHFS} (MacOSX) : \url{http://code.google.com/p/macfuse/}
-        \item \textbf{SSHFS} (Linux) : \url{http://fuse.sourceforge.net/sshfs.html}
-        \item \textbf{SSHFS} (Windows) : \url{http://code.google.com/p/win-sshfs/}
+        \item \textbf{Windows} (mobaxterm) : \href{http://mobaxterm.mobatek.net/}{mobaxterm}
+        \item \textbf{Windows} (SSHFS) : \url{http://code.google.com/p/win-sshfs/}
+        \item \textbf{MacOSX} (SSHFS) : \url{http://code.google.com/p/macfuse/}
+        \item \textbf{Linux} (SSHFS) : \url{http://fuse.sourceforge.net/sshfs.html}
+        \item \textbf{KDE} (Konqueror) : type fish://user@host:port
+        \item \textbf{Gnome} (Nautilus) : type sftp://user@host:port
       \end{itemize}
       \end{block}
 \end{frame}
@@ -713,12 +632,12 @@
   \frametitle{Submitting a Job}
       \begin{block}{Basic Job Properties}
    \begin{itemize}%[<+-| alert@+>]
-	\item \textbf{Name} So you can identify it later
+	\item \textbf{Name} So you can identify the output later.
 	\item \textbf{Job Type} How many processes and how many threads?
 	%\item \textbf{Command} What command to execute on the cluster e.g "echo hello"
 	\item \textbf{Walltime} How long the job can run for. The job will be cancelled if the walltime is exceeded. 
-	\item \textbf{Memory} How much memory to use? Job will die if memory is exceeded
-	\item \textbf{CPU cores} How many to use? Your program may try to use more than you request e.g MATLAB
+	\item \textbf{Memory} How much memory to use? Job will die if memory is exceeded.
+	\item \textbf{CPU cores} How many to use? Your program may try to use more than you request e.g.\ MATLAB.
 	%\item \textbf{Files} You need to specify where additional files can be found and change references in your scripts
 	\item \textbf{Account or Group information} Especially important for access to licensed software and funded research allocations
 	\item \textbf{Emails} Notification of job starting, also scheduler errors.
@@ -752,8 +671,8 @@
   \frametitle{Submitting a Job}
       \begin{block}{Outputs}
    \begin{center}
-   \includegraphics[width=250pt]{NeSI_img/console.png}\\
-      Jobs have no interactive interface, only command line output, but graphical tools are available on the login and build/development nodes.
+   \includegraphics[width=200pt]{NeSI_img/console.png}\\
+      Jobs have no interactive interface, but command line output and can write to files. Graphical tools are, however, available on the login and build/development nodes.
    \end{center}      
   \end{block}
 }
@@ -764,10 +683,10 @@
   \frametitle{Submitting a Job}
       \begin{block}{Outputs}
    \begin{itemize}%[<+-| alert@+>]
-	\item Since there is no interactive terminal to display output, output it is written to a text file
-	\item Standard output goes to stdout, standard error goes to stderr
-	\item These should have unique names for a given job directory
-	\item If your application writes to other files e.g. output data, that stays the same
+	\item Information output while the job runs is written to a text file.
+	\item Standard output goes to stdout, standard error goes to stderr.
+	\item These should have unique names for a given job directory (see job Name)
+	\item If your application writes to other files e.g.\ output data, that stays the same
 	\item When your job fails, first look at stdout and stderr for clues
    \end{itemize}
   \end{block}
@@ -803,7 +722,7 @@
       \begin{block}{Quick Intro to LoadLeveler}
    \begin{itemize}%[<+-| alert@+>]
 	\item You need to access the login node and work from a terminal
-	\item Requires working knowledge of Linux command line:
+	\item Requires basic knowledge of the Linux command line:
    \begin{itemize}%[<+-| alert@+>]
 	\item How to navigate file system and edit files
 	\item Shell scripting is very useful for automation
@@ -855,32 +774,30 @@ Specific architectures
   \frametitle{Submitting a Job}
 %      \begin{block}{Job Description Example : SMP}
 \begin{verbatim}
-#!/bin/bash 
-# Optimized for run parallel job of 12 Cores in NeSI (Pandora-westmere)
-##########################################################################
-#@ job_name = Gaussian
-#@ class = default
-#@ notification = never
-#@ group = nesi
-#@ account_no = uoa
-#@ wall_clock_limit = 1:00
-#@ initialdir = $(home)
-#@ output = $(home)/$(job_name).txt
-#@ error = $(home)/$(job_name).err
-#@ job_type = serial
-#@ resources = ConsumableMemory(2048mb) ConsumableVirtualMemory(2048mb)
-#@ parallel_threads = 12
-#@ environment = COPY_ALL,OMP_NUM_THREADS=12
+##########################################################################################
+# for detailed information about LoadLeveler job description files, please visit:
+#    - https://wiki.auckland.ac.nz/display/CERES/NeSI+Pan+Cluster+Job+Submission+Guide
+#    - https://wiki.auckland.ac.nz/display/CERES/LoadLeveler+-+job+submission
+#    - https://wiki.auckland.ac.nz/display/CERES/LoadLeveler+-+example+scripts
+##########################################################################################
+ 
+#@ job_name         = getting_started_job
+#@ class            = default
+#@ group            = nesi
+#@ wall_clock_limit = 00:01:00
+#@ resources        = ConsumableMemory(2048mb) ConsumableVirtualMemory(2048mb)
+#@ job_type         = serial
+#@ output           = $(home)/getting_started/stdout.txt
+#@ error            = $(home)/getting_started/stderr.txt
+#@ notification     = never
 #@ queue
-########################################################################## 
-module load g09/C.01
-cd $SCRATCH_DIR
-cp -r $HOME/Gaussian/h2o_opt.dat . 
-setenv GAUSS_SCRDIR $SCRATCH_DIR
-###  Run the Parallel Program
-g09 < ./h2o_opt.dat > h2ol_opt.log
-###  Transfering the results to the home directory ($HOME) 
-cp -pr $TMP_DIR $HOME/results/
+ 
+ 
+# Enforce memory constraints. Value is in KBlet "limit = 2048 * 1024"
+let "limit = 2048 * 1024"
+ulimit -v ${limit} -m ${limit}
+ 
+cat ~/inputfile.txt
 \end{verbatim}
 %  \end{block}
 \end{frame}
@@ -993,12 +910,13 @@ cp -pr $SCRATCH_DIR $HOME/OUT/lammps/
 	\item We have many specialised software packages.
 	\item Best way to see what we have is by checking the wiki. %running module avail on the login node
 	\item The Wiki also has a software section
-	\item We can install software that you need, but …
+	\item We can install software that you need:
    \begin{itemize}%[<+-| alert@+>]
-	\item It must run on Linux
-	\item It must run in batch mode – no user interaction
-	\item You must have the required licenses
-	\item You can install software in your home directory if it is really esoteric
+	\item Linux version of the software.
+	\item Command line mode without user interaction.
+	\item Interaction possible for small tests on the build nodes. 
+	\item We don't provide licenses.
+	\item You can install software in your home directory if it is really esoteric.
    \end{itemize}
    \end{itemize}
   \end{block}
@@ -1014,9 +932,8 @@ cp -pr $SCRATCH_DIR $HOME/OUT/lammps/
 	\item Share with us a short test and we will study the scalability of your application.
 	\item Try to be accurate  with the walltime, it will help to the LL to schedule the jobs better.
 	\item Be aware that you are sharing resources with other researchers.
-	\item If you need to run a test for a long time (>2h) use tLL.
 	\item A wrong memory request or a wrong job description setup can potentially affect others.
-	\item If we find some case like that, we may be forced to cancel the job with this behaviour and inform the owner by email.
+	\item If we find some case like that, we may be forced to cancel the job with this behavior and inform the owner by email.
    \end{itemize}
   \end{block}
 }
