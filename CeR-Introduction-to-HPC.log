@@ -1,9 +1,9 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2014.1.13)  9 APR 2014 13:27
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2014.1.13)  10 APR 2014 10:27
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
-**NeSI_template.tex
-(./NeSI_template.tex
+**CeR-Introduction-to-HPC.tex
+(./CeR-Introduction-to-HPC.tex
 LaTeX2e <2011/06/27>
 Babel <3.9f> and hyphenation patterns for 78 languages loaded.
 (/usr/share/texmf/tex/latex/beamer/base/beamer.cls
@@ -1100,8 +1100,8 @@ Package: beamerinnerthemecircles 2010/06/17  (rcs-revision d02a7cf4d8ae)
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
 (hyperref)                removing `\\' on input line 67.
 
-(./NeSI_template.aux)
-\openout1 = `NeSI_template.aux'.
+No file CeR-Introduction-to-HPC.aux.
+\openout1 = `CeR-Introduction-to-HPC.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 71.
 LaTeX Font Info:    ... okay on input line 71.
@@ -1117,7 +1117,6 @@ LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 71.
 LaTeX Font Info:    ... okay on input line 71.
 LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 71.
 LaTeX Font Info:    ... okay on input line 71.
-
 *geometry* driver: auto-detecting
 *geometry* detected driver: pdftex
 *geometry* verbose mode - [ preamble ] result:
@@ -1195,10 +1194,8 @@ Package: gettitlestring 2010/12/03 v1.4 Cleanup title references (HO)
 LaTeX Info: Redefining \ref on input line 71.
 LaTeX Info: Redefining \pageref on input line 71.
 LaTeX Info: Redefining \nameref on input line 71.
-
-(./NeSI_template.out) (./NeSI_template.out)
 \@outlinefile=\write5
-\openout5 = `NeSI_template.out'.
+\openout5 = `CeR-Introduction-to-HPC.out'.
 
 
 (/usr/share/texmf/tex/latex/beamer/base/translator/dicts/translator-basic-dicti
@@ -1227,10 +1224,12 @@ Dictionary: translator-theorem-dictionary, Language: English
 )
 LaTeX Info: Redefining \includegraphics on input line 71.
 \c@lstlisting=\count210
- (./NeSI_template.nav)
+
+No file CeR-Introduction-to-HPC.nav.
 [1
 
-{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}] (./NeSI_template.toc)
+{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}]
+No file CeR-Introduction-to-HPC.toc.
 
 LaTeX Font Warning: Font shape `T1/cmss/bx/n' in size <4> not available
 (Font)              size <5> substituted on input line 88.
@@ -1253,35 +1252,35 @@ LaTeX Font Warning: Font shape `OMS/cmss/m/n' undefined
 
 [3
 
-] <NeSI_img/nesi_logo.jpg, id=394, 455.301pt x 207.6558pt>
+] <NeSI_img/nesi_logo.jpg, id=107, 455.301pt x 207.6558pt>
 File: NeSI_img/nesi_logo.jpg Graphic file (type jpg)
 
 <use NeSI_img/nesi_logo.jpg>
 Package pdftex.def Info: NeSI_img/nesi_logo.jpg used on input line 131.
 (pdftex.def)             Requested size: 225.0pt x 102.61725pt.
 
-<NeSI_img/logo-u-of-a.jpg, id=395, 100.375pt x 61.22874pt>
+<NeSI_img/logo-u-of-a.jpg, id=108, 100.375pt x 61.22874pt>
 File: NeSI_img/logo-u-of-a.jpg Graphic file (type jpg)
 
 <use NeSI_img/logo-u-of-a.jpg>
 Package pdftex.def Info: NeSI_img/logo-u-of-a.jpg used on input line 131.
 (pdftex.def)             Requested size: 50.0pt x 30.5003pt.
 
-<NeSI_img/logo-u-of-c.jpg, id=396, 100.375pt x 61.22874pt>
+<NeSI_img/logo-u-of-c.jpg, id=109, 100.375pt x 61.22874pt>
 File: NeSI_img/logo-u-of-c.jpg Graphic file (type jpg)
 
 <use NeSI_img/logo-u-of-c.jpg>
 Package pdftex.def Info: NeSI_img/logo-u-of-c.jpg used on input line 131.
 (pdftex.def)             Requested size: 50.0pt x 30.5003pt.
 
-<NeSI_img/logo-niwa.jpg, id=397, 100.375pt x 61.22874pt>
+<NeSI_img/logo-niwa.jpg, id=110, 100.375pt x 61.22874pt>
 File: NeSI_img/logo-niwa.jpg Graphic file (type jpg)
 
 <use NeSI_img/logo-niwa.jpg>
 Package pdftex.def Info: NeSI_img/logo-niwa.jpg used on input line 131.
 (pdftex.def)             Requested size: 50.0pt x 30.5003pt.
 
-<NeSI_img/logo-ministry-of-si.jpg, id=398, 150.5625pt x 61.22874pt>
+<NeSI_img/logo-ministry-of-si.jpg, id=111, 150.5625pt x 61.22874pt>
 File: NeSI_img/logo-ministry-of-si.jpg Graphic file (type jpg)
 
 <use NeSI_img/logo-ministry-of-si.jpg>
@@ -1289,7 +1288,7 @@ Package pdftex.def Info: NeSI_img/logo-ministry-of-si.jpg used on input line 13
 1.
 (pdftex.def)             Requested size: 50.0pt x 20.33353pt.
 
-<NeSI_img/logo-manaaki-whenua.jpg, id=399, 100.375pt x 61.22874pt>
+<NeSI_img/logo-manaaki-whenua.jpg, id=112, 100.375pt x 61.22874pt>
 File: NeSI_img/logo-manaaki-whenua.jpg Graphic file (type jpg)
 
 <use NeSI_img/logo-manaaki-whenua.jpg>
@@ -1297,7 +1296,7 @@ Package pdftex.def Info: NeSI_img/logo-manaaki-whenua.jpg used on input line 13
 1.
 (pdftex.def)             Requested size: 50.0pt x 30.5003pt.
 
-<NeSI_img/logo-u-of-o.jpg, id=400, 100.375pt x 61.22874pt>
+<NeSI_img/logo-u-of-o.jpg, id=113, 100.375pt x 61.22874pt>
 File: NeSI_img/logo-u-of-o.jpg Graphic file (type jpg)
 
 <use NeSI_img/logo-u-of-o.jpg>
@@ -1315,7 +1314,7 @@ LaTeX Font Info:    Try loading font information for T1+cmtt on input line 164.
  (/usr/share/texlive/texmf-dist/tex/latex/base/t1cmtt.fd
 File: t1cmtt.fd 1999/05/25 v2.5h Standard LaTeX font definitions
 )
-<NeSI_img/pingu-friend.jpg, id=541, 433.62pt x 380.42125pt>
+<NeSI_img/pingu-friend.jpg, id=169, 433.62pt x 380.42125pt>
 File: NeSI_img/pingu-friend.jpg Graphic file (type jpg)
 
 <use NeSI_img/pingu-friend.jpg>
@@ -1324,7 +1323,7 @@ Package pdftex.def Info: NeSI_img/pingu-friend.jpg used on input line 164.
  [6
 
  <./NeSI_img/pingu-friend.jpg>]
-<NeSI_img/node_view.png, id=613, 520.8258pt x 263.0628pt>
+<NeSI_img/node_view.png, id=197, 520.8258pt x 263.0628pt>
 File: NeSI_img/node_view.png Graphic file (type png)
 
 <use NeSI_img/node_view.png>
@@ -1345,7 +1344,7 @@ Overfull \hbox (7.3pt too wide) detected at line 192
  <./NeSI_img/node_view.png>] [8
 
 ]
-<NeSI_img/shared_mem.png, id=756, 308.45134pt x 212.33969pt>
+<NeSI_img/shared_mem.png, id=257, 308.45134pt x 212.33969pt>
 File: NeSI_img/shared_mem.png Graphic file (type png)
 
 <use NeSI_img/shared_mem.png>
@@ -1354,7 +1353,7 @@ Package pdftex.def Info: NeSI_img/shared_mem.png used on input line 235.
  [9
 
  <./NeSI_img/shared_mem.png>]
-<NeSI_img/hybrid_mem.png, id=828, 360.60495pt x 146.0301pt>
+<NeSI_img/hybrid_mem.png, id=286, 360.60495pt x 146.0301pt>
 File: NeSI_img/hybrid_mem.png Graphic file (type png)
 
 <use NeSI_img/hybrid_mem.png>
@@ -1379,7 +1378,7 @@ Overfull \vbox (3.95119pt too high) detected at line 309
 ] [14
 
 ]
-<NeSI_img/NeSI_compute_path.png, id=1182, 1489.565pt x 612.2875pt>
+<NeSI_img/NeSI_compute_path.png, id=424, 1489.565pt x 612.2875pt>
 File: NeSI_img/NeSI_compute_path.png Graphic file (type png)
 
 <use NeSI_img/NeSI_compute_path.png>
@@ -1415,14 +1414,14 @@ Package pdftex.def Info: NeSI_img/NeSI_compute_path.png used on input line 433.
 ] [19
 
 ]
-<NeSI_img/Amdahl.png, id=1535, 558.4062pt x 419.166pt>
+<NeSI_img/Amdahl.png, id=561, 558.4062pt x 419.166pt>
 File: NeSI_img/Amdahl.png Graphic file (type png)
 
 <use NeSI_img/Amdahl.png>
 Package pdftex.def Info: NeSI_img/Amdahl.png used on input line 488.
 (pdftex.def)             Requested size: 120.0pt x 90.07416pt.
 
-<NeSI_img/migrate_scalability.png, id=1536, 785.93625pt x 372.39125pt>
+<NeSI_img/migrate_scalability.png, id=562, 785.93625pt x 372.39125pt>
 File: NeSI_img/migrate_scalability.png Graphic file (type png)
 
 <use NeSI_img/migrate_scalability.png>
@@ -1446,9 +1445,9 @@ Overfull \hbox (6.35507pt too wide) in paragraph at lines 488--488
 ] [24
 
 ]
-\openout4 = `NeSI_template.vrb'.
+\openout4 = `CeR-Introduction-to-HPC.vrb'.
 
- (./NeSI_template.vrb) [25
+ (./CeR-Introduction-to-HPC.vrb) [25
 
 ] [26
 
@@ -1460,7 +1459,7 @@ Overfull \vbox (12.27986pt too high) detected at line 644
 
 ] [28
 
-] <NeSI_img/console.png, id=2189, 335.3328pt x 203.3196pt>
+] <NeSI_img/console.png, id=830, 335.3328pt x 203.3196pt>
 File: NeSI_img/console.png Graphic file (type png)
 
 <use NeSI_img/console.png>
@@ -1485,9 +1484,9 @@ Overfull \vbox (2.35118pt too high) detected at line 734
 ] [33
 
 ]
-\openout4 = `NeSI_template.vrb'.
+\openout4 = `CeR-Introduction-to-HPC.vrb'.
 
- (./NeSI_template.vrb
+ (./CeR-Introduction-to-HPC.vrb
 Overfull \hbox (201.96352pt too wide) in paragraph at lines 4--4
 []\T1/cmtt/m/n/10.95 ##########################################################
 ################################ 
@@ -1555,9 +1554,9 @@ ead of 0 percent on input line 785.
 [34
 
 ]
-\openout4 = `NeSI_template.vrb'.
+\openout4 = `CeR-Introduction-to-HPC.vrb'.
 
- (./NeSI_template.vrb)
+ (./CeR-Introduction-to-HPC.vrb)
 
 Class beamer Warning: Frame text is shrunk by a factor of 14.83917 percent inst
 ead of 0 percent on input line 813.
@@ -1565,9 +1564,9 @@ ead of 0 percent on input line 813.
 [35
 
 ]
-\openout4 = `NeSI_template.vrb'.
+\openout4 = `CeR-Introduction-to-HPC.vrb'.
 
- (./NeSI_template.vrb
+ (./CeR-Introduction-to-HPC.vrb
 Overfull \hbox (117.08795pt too wide) in paragraph at lines 5--5
 []\T1/cmtt/m/n/10.95 # Optimized for run parallel job of 512 Cores at NeSI (Pan
 dora-SandyBridge)[] 
@@ -1586,84 +1585,74 @@ irtualMemory(4096mb)[]
  []
 
 
-Overfull \hbox (32.21239pt too wide) in paragraph at lines 20--20
-[]\T1/cmtt/m/n/10.95 #@ initialdir       = /share/src/LAMMPS/lammps-12Aug13/ben
-ch[] 
- []
-
-
 Overfull \hbox (111.42958pt too wide) in paragraph at lines 23--23
 []\T1/cmtt/m/n/10.95 ##########################################################
 ################[] 
  []
 
-
-Overfull \hbox (71.82098pt too wide) in paragraph at lines 29--29
-[]\T1/cmtt/m/n/10.95 MPIRUN lmp_mpi -var x 20 -var y 20 -var z 20 -in in.lj > l
-j-512.out[] 
- []
-
-
-Overfull \hbox (20.89565pt too wide) in paragraph at lines 30--30
-[]\T1/cmtt/m/n/10.95 ###  Transfering the results to the home directory ($HOME)
-[] 
- []
-
 )
 
-Class beamer Warning: Frame text is shrunk by a factor of 46.85364 percent inst
-ead of 0 percent on input line 850.
+Class beamer Warning: Frame text is shrunk by a factor of 38.19885 percent inst
+ead of 0 percent on input line 846.
 
 [36
 
 ] [37
 
 ]
-\openout4 = `NeSI_template.vrb'.
+\openout4 = `CeR-Introduction-to-HPC.vrb'.
 
- (./NeSI_template.vrb) [38
+ (./CeR-Introduction-to-HPC.vrb) [38
 
 ]
-\openout4 = `NeSI_template.vrb'.
+\openout4 = `CeR-Introduction-to-HPC.vrb'.
 
- (./NeSI_template.vrb) [39
+ (./CeR-Introduction-to-HPC.vrb)
+[39
 
 ] [40
 
 ] [41
 
-]
-[42
+] [42
 
 ] [43
 
-] <NeSI_img/Slide00.png, id=3241, 722.7pt x 542.025pt>
+] <NeSI_img/Slide00.png, id=1236, 722.7pt x 542.025pt>
 File: NeSI_img/Slide00.png Graphic file (type png)
 
 <use NeSI_img/Slide00.png>
-Package pdftex.def Info: NeSI_img/Slide00.png used on input line 1011.
+Package pdftex.def Info: NeSI_img/Slide00.png used on input line 1008.
 (pdftex.def)             Requested size: 360.56615pt x 270.41664pt.
  [44
 
  <./NeSI_img/Slide00.png>]
 \tf@nav=\write6
-\openout6 = `NeSI_template.nav'.
+\openout6 = `CeR-Introduction-to-HPC.nav'.
 
 \tf@toc=\write7
-\openout7 = `NeSI_template.toc'.
+\openout7 = `CeR-Introduction-to-HPC.toc'.
 
 \tf@snm=\write8
-\openout8 = `NeSI_template.snm'.
+\openout8 = `CeR-Introduction-to-HPC.snm'.
 
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 1015.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 1015.
- (./NeSI_template.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 1015.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 1015.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 1012.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 1012.
 
-Package rerunfilecheck Info: File `NeSI_template.out' has not changed.
-(rerunfilecheck)             Checksum: C130381F67F633BBF4DA266244DC3FED;1419.
+(./CeR-Introduction-to-HPC.aux)
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 1012.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 1012.
 
+
+
+Package rerunfilecheck Warning: File `CeR-Introduction-to-HPC.out' has changed.
+
+(rerunfilecheck)                Rerun to get outlines right
+(rerunfilecheck)                or use package `bookmark'.
+
+Package rerunfilecheck Info: Checksums for `CeR-Introduction-to-HPC.out':
+(rerunfilecheck)             Before: <no file>
+(rerunfilecheck)             After:  C130381F67F633BBF4DA266244DC3FED;1419.
 
 LaTeX Font Warning: Size substitutions with differences
 (Font)              up to 1.0pt have occurred.
@@ -1671,16 +1660,16 @@ LaTeX Font Warning: Size substitutions with differences
 
 LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 1015.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 1012.
  ) 
 Here is how much of TeX's memory you used:
- 18841 strings out of 493307
- 337899 string characters out of 6139905
- 457857 words of memory out of 5000000
- 21659 multiletter control sequences out of 15000+600000
- 23703 words of font info for 66 fonts, out of 8000000 for 9000
+ 18610 strings out of 493307
+ 334897 string characters out of 6139905
+ 423910 words of memory out of 5000000
+ 21439 multiletter control sequences out of 15000+600000
+ 22928 words of font info for 65 fonts, out of 8000000 for 9000
  958 hyphenation exceptions out of 8191
- 49i,20n,53p,430b,772s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 49i,16n,53p,440b,771s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/share/texmf/fonts/enc/dvips/cm-super/cm-super-t1.enc}</usr/share/texliv
 e/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texlive/texmf
 -dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/
@@ -1690,15 +1679,14 @@ m-super/sfsi1000.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfss1000.pfb
 onts/type1/public/cm-super/sfss1440.pfb></usr/share/texmf/fonts/type1/public/cm
 -super/sfss2074.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfss2488.pfb>
 </usr/share/texmf/fonts/type1/public/cm-super/sfsx0600.pfb></usr/share/texmf/fo
-nts/type1/public/cm-super/sfsx0800.pfb></usr/share/texmf/fonts/type1/public/cm-
-super/sfsx1000.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfsx1095.pfb><
-/usr/share/texmf/fonts/type1/public/cm-super/sftt0800.pfb></usr/share/texmf/fon
-ts/type1/public/cm-super/sftt1000.pfb></usr/share/texmf/fonts/type1/public/cm-s
-uper/sftt1095.pfb>
-Output written on NeSI_template.pdf (44 pages, 2372935 bytes).
+nts/type1/public/cm-super/sfsx1000.pfb></usr/share/texmf/fonts/type1/public/cm-
+super/sfsx1095.pfb></usr/share/texmf/fonts/type1/public/cm-super/sftt0800.pfb><
+/usr/share/texmf/fonts/type1/public/cm-super/sftt1000.pfb></usr/share/texmf/fon
+ts/type1/public/cm-super/sftt1095.pfb>
+Output written on CeR-Introduction-to-HPC.pdf (44 pages, 2283070 bytes).
 PDF statistics:
- 3348 PDF objects out of 3580 (max. 8388607)
- 3177 compressed objects within 32 object streams
+ 1340 PDF objects out of 1440 (max. 8388607)
+ 1233 compressed objects within 13 object streams
  111 named destinations out of 1000 (max. 500000)
- 325 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 141 words of extra memory for PDF output out of 10000 (max. 10000000)
 

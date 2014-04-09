@@ -260,7 +260,7 @@
 	\item Multiple-processor computer system in which each process has its own private memory. 
 	\item Computational tasks can only operate on local data.
 	\item If remote data is required, the computational task must communicate with one or more remote processors.
-	\item The most popular parallel programming paradigm is MPI.
+	\item The most popular parallel programming paradigm is MPI (Message Passing Interface).
    \end{itemize}
 \begin{center}
  %\includegraphics[width=120pt]{NeSI_img/parallel_paradigm/distributed_mem.png}
@@ -650,13 +650,13 @@
    \begin{block}{Two (and a half) main tools for submitting a job}
    \begin{itemize}%[<+-| alert@+>]
 	\item LoadLeveler (LL) – for people comfortable with the Linux command line
-	\item Slurm: will replace LL
+	\item SLURM: will replace LL
 	\item Grisu Template Client – for a graphical interface
    \end{itemize}
   \end{block}
    \begin{block}{Which one to use? In general}
    \begin{itemize}%[<+-| alert@+>]
-	\item LL/Slurm for complex workflows or large numbers of jobs
+	\item LL/SLURM for complex workflows or large numbers of jobs
 	\item Grisu for very simple workflows or few jobs 
    \end{itemize}
   \end{block}
@@ -734,7 +734,7 @@
 }
 
 
-\subsection{LoadLeveler and Slurm}
+\subsection{LoadLeveler and SLURM}
 \frame[t]
 {
   \frametitle{Submitting a Job}
@@ -820,7 +820,7 @@ Specific architectures
 #!/bin/bash
 # Optimized for run parallel job of 512 Cores at NeSI (Pandora-SandyBridge)
 ##########################################################################
-#@ job_name         = LAMMPS_TEST
+#@ job_name         = LL_example
 #@ class            = default
 #@ group            = nesi
 #@ notification     = never
@@ -833,18 +833,14 @@ Specific architectures
 #@ output           = $(job_name).$(jobid).out
 #@ error            = $(job_name).$(jobid).err
 #@ requirements     = (Feature=="sandybridge")
-#@ initialdir       = /share/src/LAMMPS/lammps-12Aug13/bench
+#@ initialdir       = /projects/uoa123456
 #@ total_tasks      = 512
 #@ queue
 ##########################################################################
-module load lammps/12Aug13-sandybridge
-cd $SCRATCH_DIR
-cp /share/test/LAMMPS/* .
-###  Run the Parallel Program
-export OMP_NUM_THREADS=1
-MPIRUN lmp_mpi -var x 20 -var y 20 -var z 20 -in in.lj > lj-512.out
-###  Transfering the results to the home directory ($HOME)
-cp -pr $SCRATCH_DIR $HOME/OUT/lammps/
+module load myModule
+
+MPIRUN mpi_binary
+
 \end{verbatim}
 %  \end{block}
 \end{frame}
@@ -865,7 +861,7 @@ cp -pr $SCRATCH_DIR $HOME/OUT/lammps/
 }
 
 \begin{frame}[fragile,shrink]
-  \frametitle{Submitting a Job with Slurm: example job file}
+  \frametitle{Submitting a job with SLURM: example job file}
 \begin{block}{Job Description Example : Serial}
 \begin{scriptsize}
 \begin{verbatim}
@@ -885,8 +881,8 @@ srun cat ~/inputfile.txt
 
 
 \begin{frame}[fragile,shrink]
-  \frametitle{Submitting a Job with Slurm: example MPI job file}
-     \begin{block}{Job Description Example : MPI}
+  \frametitle{Submitting a job with Slurm: example MPI job file}
+     \begin{block}{SLURM job Description Example : MPI}
 \begin{scriptsize}
 \begin{verbatim}
 #!/bin/bash
@@ -898,6 +894,7 @@ srun cat ~/inputfile.txt
 #SBATCH -C sb               # sb=Sandybridge,wm=Westmere
 
 source /etc/profile
+module load myModule
 srun mpi_binary
 \end{verbatim}
 \end{scriptsize}
@@ -951,7 +948,7 @@ srun mpi_binary
 	\item Share with us a short test and we will study the scalability of your application.
 	\item Try to be accurate  with the walltime, it will help to the LL to schedule the jobs better.
 	\item Be aware that you are sharing resources with other researchers.
-	\item A wrong memory request or a wrong job description setup can potentially affect others.
+	\item A wrong memory request or a wrong job description setup can potentially affect others. (Should be less a problem with SLURM.)
 	\item If we find some case like that, we may be forced to cancel the job with this behavior and inform the owner by email.
    \end{itemize}
   \end{block}

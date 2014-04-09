@@ -11,6 +11,7 @@
 #SBATCH -C sb               # sb=Sandybridge,wm=Westmere
 
 source /etc/profile
+module load myModule
 srun mpi_binary
 \end{verbatim}
 \end{scriptsize}
