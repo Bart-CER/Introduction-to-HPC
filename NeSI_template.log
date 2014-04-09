@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2014.1.13)  26 FEB 2014 12:29
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2014.1.13)  9 APR 2014 13:27
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1253,35 +1253,35 @@ LaTeX Font Warning: Font shape `OMS/cmss/m/n' undefined
 
 [3
 
-] <NeSI_img/nesi_logo.jpg, id=390, 455.301pt x 207.6558pt>
+] <NeSI_img/nesi_logo.jpg, id=394, 455.301pt x 207.6558pt>
 File: NeSI_img/nesi_logo.jpg Graphic file (type jpg)
 
 <use NeSI_img/nesi_logo.jpg>
 Package pdftex.def Info: NeSI_img/nesi_logo.jpg used on input line 131.
 (pdftex.def)             Requested size: 225.0pt x 102.61725pt.
 
-<NeSI_img/logo-u-of-a.jpg, id=391, 100.375pt x 61.22874pt>
+<NeSI_img/logo-u-of-a.jpg, id=395, 100.375pt x 61.22874pt>
 File: NeSI_img/logo-u-of-a.jpg Graphic file (type jpg)
 
 <use NeSI_img/logo-u-of-a.jpg>
 Package pdftex.def Info: NeSI_img/logo-u-of-a.jpg used on input line 131.
 (pdftex.def)             Requested size: 50.0pt x 30.5003pt.
 
-<NeSI_img/logo-u-of-c.jpg, id=392, 100.375pt x 61.22874pt>
+<NeSI_img/logo-u-of-c.jpg, id=396, 100.375pt x 61.22874pt>
 File: NeSI_img/logo-u-of-c.jpg Graphic file (type jpg)
 
 <use NeSI_img/logo-u-of-c.jpg>
 Package pdftex.def Info: NeSI_img/logo-u-of-c.jpg used on input line 131.
 (pdftex.def)             Requested size: 50.0pt x 30.5003pt.
 
-<NeSI_img/logo-niwa.jpg, id=393, 100.375pt x 61.22874pt>
+<NeSI_img/logo-niwa.jpg, id=397, 100.375pt x 61.22874pt>
 File: NeSI_img/logo-niwa.jpg Graphic file (type jpg)
 
 <use NeSI_img/logo-niwa.jpg>
 Package pdftex.def Info: NeSI_img/logo-niwa.jpg used on input line 131.
 (pdftex.def)             Requested size: 50.0pt x 30.5003pt.
 
-<NeSI_img/logo-ministry-of-si.jpg, id=394, 150.5625pt x 61.22874pt>
+<NeSI_img/logo-ministry-of-si.jpg, id=398, 150.5625pt x 61.22874pt>
 File: NeSI_img/logo-ministry-of-si.jpg Graphic file (type jpg)
 
 <use NeSI_img/logo-ministry-of-si.jpg>
@@ -1289,7 +1289,7 @@ Package pdftex.def Info: NeSI_img/logo-ministry-of-si.jpg used on input line 13
 1.
 (pdftex.def)             Requested size: 50.0pt x 20.33353pt.
 
-<NeSI_img/logo-manaaki-whenua.jpg, id=395, 100.375pt x 61.22874pt>
+<NeSI_img/logo-manaaki-whenua.jpg, id=399, 100.375pt x 61.22874pt>
 File: NeSI_img/logo-manaaki-whenua.jpg Graphic file (type jpg)
 
 <use NeSI_img/logo-manaaki-whenua.jpg>
@@ -1297,7 +1297,7 @@ Package pdftex.def Info: NeSI_img/logo-manaaki-whenua.jpg used on input line 13
 1.
 (pdftex.def)             Requested size: 50.0pt x 30.5003pt.
 
-<NeSI_img/logo-u-of-o.jpg, id=396, 100.375pt x 61.22874pt>
+<NeSI_img/logo-u-of-o.jpg, id=400, 100.375pt x 61.22874pt>
 File: NeSI_img/logo-u-of-o.jpg Graphic file (type jpg)
 
 <use NeSI_img/logo-u-of-o.jpg>
@@ -1315,7 +1315,7 @@ LaTeX Font Info:    Try loading font information for T1+cmtt on input line 164.
  (/usr/share/texlive/texmf-dist/tex/latex/base/t1cmtt.fd
 File: t1cmtt.fd 1999/05/25 v2.5h Standard LaTeX font definitions
 )
-<NeSI_img/pingu-friend.jpg, id=535, 433.62pt x 380.42125pt>
+<NeSI_img/pingu-friend.jpg, id=541, 433.62pt x 380.42125pt>
 File: NeSI_img/pingu-friend.jpg Graphic file (type jpg)
 
 <use NeSI_img/pingu-friend.jpg>
@@ -1324,7 +1324,7 @@ Package pdftex.def Info: NeSI_img/pingu-friend.jpg used on input line 164.
  [6
 
  <./NeSI_img/pingu-friend.jpg>]
-<NeSI_img/node_view.png, id=606, 520.8258pt x 263.0628pt>
+<NeSI_img/node_view.png, id=613, 520.8258pt x 263.0628pt>
 File: NeSI_img/node_view.png Graphic file (type png)
 
 <use NeSI_img/node_view.png>
@@ -1345,7 +1345,7 @@ Overfull \hbox (7.3pt too wide) detected at line 192
  <./NeSI_img/node_view.png>] [8
 
 ]
-<NeSI_img/shared_mem.png, id=747, 308.45134pt x 212.33969pt>
+<NeSI_img/shared_mem.png, id=756, 308.45134pt x 212.33969pt>
 File: NeSI_img/shared_mem.png Graphic file (type png)
 
 <use NeSI_img/shared_mem.png>
@@ -1354,14 +1354,14 @@ Package pdftex.def Info: NeSI_img/shared_mem.png used on input line 235.
  [9
 
  <./NeSI_img/shared_mem.png>]
-<NeSI_img/hybrid_mem.png, id=818, 360.60495pt x 146.0301pt>
+<NeSI_img/hybrid_mem.png, id=828, 360.60495pt x 146.0301pt>
 File: NeSI_img/hybrid_mem.png Graphic file (type png)
 
 <use NeSI_img/hybrid_mem.png>
 Package pdftex.def Info: NeSI_img/hybrid_mem.png used on input line 270.
 (pdftex.def)             Requested size: 150.0pt x 60.74396pt.
 
-Overfull \vbox (1.42378pt too high) detected at line 270
+Overfull \vbox (15.63205pt too high) detected at line 270
  []
 
 [10
@@ -1379,7 +1379,7 @@ Overfull \vbox (3.95119pt too high) detected at line 309
 ] [14
 
 ]
-<NeSI_img/NeSI_compute_path.png, id=1166, 1489.565pt x 612.2875pt>
+<NeSI_img/NeSI_compute_path.png, id=1182, 1489.565pt x 612.2875pt>
 File: NeSI_img/NeSI_compute_path.png Graphic file (type png)
 
 <use NeSI_img/NeSI_compute_path.png>
@@ -1415,14 +1415,14 @@ Package pdftex.def Info: NeSI_img/NeSI_compute_path.png used on input line 433.
 ] [19
 
 ]
-<NeSI_img/Amdahl.png, id=1515, 558.4062pt x 419.166pt>
+<NeSI_img/Amdahl.png, id=1535, 558.4062pt x 419.166pt>
 File: NeSI_img/Amdahl.png Graphic file (type png)
 
 <use NeSI_img/Amdahl.png>
 Package pdftex.def Info: NeSI_img/Amdahl.png used on input line 488.
 (pdftex.def)             Requested size: 120.0pt x 90.07416pt.
 
-<NeSI_img/migrate_scalability.png, id=1516, 785.93625pt x 372.39125pt>
+<NeSI_img/migrate_scalability.png, id=1536, 785.93625pt x 372.39125pt>
 File: NeSI_img/migrate_scalability.png Graphic file (type png)
 
 <use NeSI_img/migrate_scalability.png>
@@ -1452,19 +1452,22 @@ Overfull \hbox (6.35507pt too wide) in paragraph at lines 488--488
 
 ] [26
 
-] [27
+]
+Overfull \vbox (12.27986pt too high) detected at line 644
+ []
+
+[27
 
 ] [28
 
-]
-<NeSI_img/console.png, id=2159, 335.3328pt x 203.3196pt>
+] <NeSI_img/console.png, id=2189, 335.3328pt x 203.3196pt>
 File: NeSI_img/console.png Graphic file (type png)
 
 <use NeSI_img/console.png>
-Package pdftex.def Info: NeSI_img/console.png used on input line 676.
+Package pdftex.def Info: NeSI_img/console.png used on input line 677.
 (pdftex.def)             Requested size: 200.0pt x 121.26363pt.
 
-Overfull \vbox (6.3637pt too high) detected at line 676
+Overfull \vbox (6.3637pt too high) detected at line 677
  []
 
 [29
@@ -1473,18 +1476,13 @@ Overfull \vbox (6.3637pt too high) detected at line 676
 
 ] [31
 
-] [32
-
 ]
-\openout4 = `NeSI_template.vrb'.
+Overfull \vbox (2.35118pt too high) detected at line 734
+ []
 
- (./NeSI_template.vrb) [33
+[32
 
-]
-\openout4 = `NeSI_template.vrb'.
-
-
-(./NeSI_template.vrb) [34
+] [33
 
 ]
 \openout4 = `NeSI_template.vrb'.
@@ -1502,15 +1500,15 @@ on files, please visit:[]
  []
 
 
-Overfull \hbox (179.33003pt too wide) in paragraph at lines 6--6
-[]\T1/cmtt/m/n/10.95 #    - https://wiki.auckland.ac.nz/display/CERES/NeSI+Pan+
-Cluster+Job+Submission+Guide[] 
+Overfull \hbox (26.55402pt too wide) in paragraph at lines 6--6
+[]\T1/cmtt/m/n/10.95 #    - https://wiki.auckland.ac.nz/display/CER/Running+job
+s[] 
  []
 
 
-Overfull \hbox (128.4047pt too wide) in paragraph at lines 7--7
-[]\T1/cmtt/m/n/10.95 #    - https://wiki.auckland.ac.nz/display/CERES/LoadLevel
-er+-+job+submission[] 
+Overfull \hbox (83.13773pt too wide) in paragraph at lines 7--7
+[]\T1/cmtt/m/n/10.95 #    - https://wiki.auckland.ac.nz/display/CER/LoadLeveler
++User+Guide[] 
  []
 
 
@@ -1552,7 +1550,17 @@ Overfull \hbox (83.13773pt too wide) in paragraph at lines 24--24
 )
 
 Class beamer Warning: Frame text is shrunk by a factor of 40.89966 percent inst
-ead of 0 percent on input line 802.
+ead of 0 percent on input line 785.
+
+[34
+
+]
+\openout4 = `NeSI_template.vrb'.
+
+ (./NeSI_template.vrb)
+
+Class beamer Warning: Frame text is shrunk by a factor of 14.83917 percent inst
+ead of 0 percent on input line 813.
 
 [35
 
@@ -1604,34 +1612,38 @@ Overfull \hbox (20.89565pt too wide) in paragraph at lines 30--30
 )
 
 Class beamer Warning: Frame text is shrunk by a factor of 46.85364 percent inst
-ead of 0 percent on input line 838.
+ead of 0 percent on input line 850.
 
 [36
 
+] [37
+
 ]
-Overfull \vbox (2.35118pt too high) detected at line 872
- []
+\openout4 = `NeSI_template.vrb'.
 
-[37
+ (./NeSI_template.vrb) [38
 
-] [38
+]
+\openout4 = `NeSI_template.vrb'.
 
-] [39
+ (./NeSI_template.vrb) [39
 
 ] [40
 
 ] [41
 
-] [42
-
 ]
-<NeSI_img/Slide00.png, id=3126, 722.7pt x 542.025pt>
+[42
+
+] [43
+
+] <NeSI_img/Slide00.png, id=3241, 722.7pt x 542.025pt>
 File: NeSI_img/Slide00.png Graphic file (type png)
 
 <use NeSI_img/Slide00.png>
-Package pdftex.def Info: NeSI_img/Slide00.png used on input line 991.
+Package pdftex.def Info: NeSI_img/Slide00.png used on input line 1011.
 (pdftex.def)             Requested size: 360.56615pt x 270.41664pt.
- [43
+ [44
 
  <./NeSI_img/Slide00.png>]
 \tf@nav=\write6
@@ -1643,13 +1655,14 @@ Package pdftex.def Info: NeSI_img/Slide00.png used on input line 991.
 \tf@snm=\write8
 \openout8 = `NeSI_template.snm'.
 
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 995.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 995.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 1015.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 1015.
  (./NeSI_template.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 995.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 995.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 1015.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 1015.
+
 Package rerunfilecheck Info: File `NeSI_template.out' has not changed.
-(rerunfilecheck)             Checksum: 99BFCAFE730E650557D1091E5DCF2E2C;1409.
+(rerunfilecheck)             Checksum: C130381F67F633BBF4DA266244DC3FED;1419.
 
 
 LaTeX Font Warning: Size substitutions with differences
@@ -1658,14 +1671,14 @@ LaTeX Font Warning: Size substitutions with differences
 
 LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 995.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 1015.
  ) 
 Here is how much of TeX's memory you used:
- 18831 strings out of 493307
- 337771 string characters out of 6139905
- 456099 words of memory out of 5000000
- 21654 multiletter control sequences out of 15000+600000
- 23390 words of font info for 65 fonts, out of 8000000 for 9000
+ 18841 strings out of 493307
+ 337899 string characters out of 6139905
+ 457857 words of memory out of 5000000
+ 21659 multiletter control sequences out of 15000+600000
+ 23703 words of font info for 66 fonts, out of 8000000 for 9000
  958 hyphenation exceptions out of 8191
  49i,20n,53p,430b,772s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/share/texmf/fonts/enc/dvips/cm-super/cm-super-t1.enc}</usr/share/texliv
@@ -1679,12 +1692,13 @@ onts/type1/public/cm-super/sfss1440.pfb></usr/share/texmf/fonts/type1/public/cm
 </usr/share/texmf/fonts/type1/public/cm-super/sfsx0600.pfb></usr/share/texmf/fo
 nts/type1/public/cm-super/sfsx0800.pfb></usr/share/texmf/fonts/type1/public/cm-
 super/sfsx1000.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfsx1095.pfb><
-/usr/share/texmf/fonts/type1/public/cm-super/sftt1000.pfb></usr/share/texmf/fon
-ts/type1/public/cm-super/sftt1095.pfb>
-Output written on NeSI_template.pdf (43 pages, 2329304 bytes).
+/usr/share/texmf/fonts/type1/public/cm-super/sftt0800.pfb></usr/share/texmf/fon
+ts/type1/public/cm-super/sftt1000.pfb></usr/share/texmf/fonts/type1/public/cm-s
+uper/sftt1095.pfb>
+Output written on NeSI_template.pdf (44 pages, 2372935 bytes).
 PDF statistics:
- 3231 PDF objects out of 3580 (max. 8388607)
- 3064 compressed objects within 31 object streams
- 109 named destinations out of 1000 (max. 500000)
+ 3348 PDF objects out of 3580 (max. 8388607)
+ 3177 compressed objects within 32 object streams
+ 111 named destinations out of 1000 (max. 500000)
  325 words of extra memory for PDF output out of 10000 (max. 10000000)
 

@@ -260,7 +260,7 @@
 	\item Multiple-processor computer system in which each process has its own private memory. 
 	\item Computational tasks can only operate on local data.
 	\item If remote data is required, the computational task must communicate with one or more remote processors.
-	\item The most popular parallel programming paradigm is MPI.
+	\item The most popular parallel programming paradigm is MPI (Message Passing Interface).
    \end{itemize}
 \begin{center}
  %\includegraphics[width=120pt]{NeSI_img/parallel_paradigm/distributed_mem.png}
@@ -314,8 +314,8 @@
    \begin{itemize}%[<+-| alert@+>]
 	\item funded by the \textbf{University of Auckland}, \textbf{Landcare Research} and the \textbf{University of Otago} with co-investment from the NZ Government through \textbf{NeSI}.
 	\item Currently have around 5,000 Intel CPU cores across about 300 hosts.
-	\item About 35 TB of memory and 80 TFLOPS (distributed).
-	\item Shared storage of 200 TB with a 40 Gbit/s Infiniband network.
+	\item About 3.5 TB of memory and 80 TFLOPS (distributed).
+	\item Shared storage of 400 TB with a 40 Gbit/s Infiniband network.
 	\item Linux RHEL 6.3
    \end{itemize}
   \end{block}
@@ -409,7 +409,7 @@
       \begin{block}{Overview}
    \begin{itemize}%[<+-| alert@+>]
 	\item The cluster is a shared resource and work must be scheduled.% to run at a later time, known as batch scheduling – no GUI.
-	\item Jobs are queued by LoadLeveler (LL) and are executed on the compute nodes.
+	\item Jobs are queued and are executed on the compute nodes.
 	\item The login node is not for running jobs, it is only for file management and job submission.
    \end{itemize}
   \end{block}
@@ -614,7 +614,7 @@
 	\begin{itemize}
 	\item Bluefern : \url{http://wiki.canterbury.ac.nz/display/BlueFern}
 	\item NIWA : \url{http://teamwork.niwa.co.nz/display/HPCF/NIWA+HPCF+User+Documentation}
-	\item CeR : \url{http://wiki.auckland.ac.nz/display/CERES/}
+	\item CeR : \url{http://wiki.auckland.ac.nz/display/CER/}
 	\end{itemize}
 	\item Examples for submitting jobs are on our Wiki page 
 	\item See the ''Getting Started section''
@@ -637,7 +637,7 @@
 	\item \textbf{Memory} How much memory to use? Job will die if memory is exceeded.
 	\item \textbf{CPU cores} How many to use? Your program may try to use more than you request e.g.\ MATLAB.
 	%\item \textbf{Files} You need to specify where additional files can be found and change references in your scripts
-	\item \textbf{Account or Group information} Especially important for access to licensed software and funded research allocations
+	\item \textbf{Account, Project or Group information} Especially important for access to licensed software and funded research allocations
 	\item \textbf{Emails} Notification of job starting, also scheduler errors.
    \end{itemize}
   \end{block}
@@ -647,16 +647,17 @@
 \frame[t]
 {
   \frametitle{Submitting a Job}
-   \begin{block}{Two main tools for submitting a job}
+   \begin{block}{Two (and a half) main tools for submitting a job}
    \begin{itemize}%[<+-| alert@+>]
-	\item LoadLeveler – for people comfortable with the Linux command line
+	\item LoadLeveler (LL) – for people comfortable with the Linux command line
+	\item SLURM: will replace LL
 	\item Grisu Template Client – for a graphical interface
    \end{itemize}
   \end{block}
    \begin{block}{Which one to use? In general}
    \begin{itemize}%[<+-| alert@+>]
-	\item LL for complex workflows or large numbers of jobs
-	\item Grisu for simple workflows or few jobs 
+	\item LL/SLURM for complex workflows or large numbers of jobs
+	\item Grisu for very simple workflows or few jobs 
    \end{itemize}
   \end{block}
 }
@@ -712,12 +713,32 @@
 }
 
 
-
-\subsection{LoadLeveler}
 \frame[t]
 {
   \frametitle{Submitting a Job}
-      \begin{block}{Quick Intro to LoadLeveler}
+      \begin{block}{Environment Modules}
+   \begin{itemize}%[<+-| alert@+>]
+	\item Modules are a convenient way to provide access to applications on the cluster
+	\item They prepare the environment you need to run the application
+	\item Commands
+        \begin{itemize}
+        \item  \textbf{module avail} - lists available modules
+        \item  \textbf{module show module\_name} - displays full information about the module with name \textit{module\_name}.
+        \item  \textbf{module load module\_name} - loads the module with name \textit{module\_name} and its dependencies. 
+        \item  \textbf{module unload module\_name } - unload  the module with name \textit{module\_name} and its dependencies. 
+        \item  \textbf{module list} - list all modules currently loaded.
+        \end{itemize}
+	\item Grisu loads a module when you select an application
+   \end{itemize}
+  \end{block}
+}
+
+
+\subsection{LoadLeveler and SLURM}
+\frame[t]
+{
+  \frametitle{Submitting a Job}
+      \begin{block}{Quick Intro to LoadLeveler and Slurm}
    \begin{itemize}%[<+-| alert@+>]
 	\item You need to access the login node and work from a terminal
 	\item Requires basic knowledge of the Linux command line:
@@ -730,52 +751,14 @@
   \end{block}
 }
 
-
-
-
 \begin{frame}[fragile,shrink]
-  \frametitle{Submitting a Job}
-      \begin{block}{Setup a Job Description}
-Can use macros in job attributes
-\begin{verbatim}
-e.g. #@ output  = $(job_name).$(jobid).out
-\end{verbatim}
-MPI jobs
-\begin{verbatim}
-#@ job_type     = MPICH | parallel
-#@ total_tasks  = 16
-#@ blocking     = 4 | unlimited
-\end{verbatim}
-  \end{block}
-
-\end{frame}
-
-
-\begin{frame}[fragile,shrink]
-  \frametitle{Submitting a Job}
-      \begin{block}{Setup a Job Description}
-GPUs
-\begin{verbatim}
-#@ resources = … GPUDev(1)
-\end{verbatim}
-
-Specific architectures
-\begin{verbatim}
-#@ requirements = (Feature==“sandybridge”)
-#@ requirements = (Feature==“Kepler”)
-\end{verbatim}
-  \end{block}
-\end{frame}
-
-
-\begin{frame}[fragile,shrink]
-  \frametitle{Submitting a Job}
+  \frametitle{Submitting a Job with LoadLeveler: example job file}
 %      \begin{block}{Job Description Example : SMP}
 \begin{verbatim}
 ##########################################################################################
 # for detailed information about LoadLeveler job description files, please visit:
-#    - https://wiki.auckland.ac.nz/display/CERES/NeSI+Pan+Cluster+Job+Submission+Guide
-#    - https://wiki.auckland.ac.nz/display/CERES/LoadLeveler+-+job+submission
+#    - https://wiki.auckland.ac.nz/display/CER/Running+jobs
+#    - https://wiki.auckland.ac.nz/display/CER/LoadLeveler+User+Guide
 #    - https://wiki.auckland.ac.nz/display/CERES/LoadLeveler+-+example+scripts
 ##########################################################################################
  
@@ -801,8 +784,37 @@ cat ~/inputfile.txt
 %  \end{block}
 \end{frame}
 
+
 \begin{frame}[fragile,shrink]
-  \frametitle{Submitting a Job}
+  \frametitle{Submitting a Job }
+\begin{block}{Setup a Job Description for LoadLeveler}
+Can use macros in job attributes
+\begin{verbatim}
+e.g. #@ output  = $(job_name).$(jobid).out
+\end{verbatim}
+MPI jobs
+\begin{verbatim}
+#@ job_type     = MPICH | parallel
+#@ total_tasks  = 16
+#@ blocking     = 4 | unlimited
+\end{verbatim}
+
+GPUs
+\begin{verbatim}
+#@ resources = … GPUDev(1)
+\end{verbatim}
+
+Specific architectures
+\begin{verbatim}
+#@ requirements = (Feature==“sandybridge”)
+#@ requirements = (Feature==“Kepler”)
+\end{verbatim}
+  \end{block}
+\end{frame}
+
+
+\begin{frame}[fragile,shrink]
+  \frametitle{Submitting a Job with LoadLeveler: more complicated job}
 %      \begin{block}{Job Description Example : MPI}
 \begin{verbatim}
 #!/bin/bash
@@ -837,44 +849,11 @@ cp -pr $SCRATCH_DIR $HOME/OUT/lammps/
 %  \end{block}
 \end{frame}
 
-%\frame[t]
-%{
-%  \frametitle{Submitting a Job}
-%      \begin{block}{ulimit : Only for CeR!}
-%   \begin{itemize}%[<+-| alert@+>]
-%	\item Constrains your memory use 
-%	\item LL only schedules the memory and avoids placing other potential jobs on the same nodes
-%	\item Without ulimit, your process’s memory use may grow and exhaust the machine, randomly killing other processes
-%	\item Grisu does this automatically
-%   \end{itemize}
-%  \end{block}
-%}
 
 
 \frame[t]
 {
-  \frametitle{Submitting a Job}
-      \begin{block}{Environment Modules}
-   \begin{itemize}%[<+-| alert@+>]
-	\item Modules are a convenient way to provide access to applications on the cluster
-	\item They prepare the environment you need to run the application
-	\item Commands
-        \begin{itemize}
-        \item  \textbf{module avail} - lists available modules
-        \item  \textbf{module show module\_name} - displays full information about the module with name \textit{module\_name}.
-        \item  \textbf{module load module\_name} - loads the module with name \textit{module\_name} and its dependencies. 
-        \item  \textbf{module unload module\_name } - unload  the module with name \textit{module\_name} and its dependencies. 
-        \item  \textbf{module list} - list all modules currently loaded.
-        \end{itemize}
-	\item Grisu loads a module when you select an application
-   \end{itemize}
-  \end{block}
-}
-
-
-\frame[t]
-{
-  \frametitle{Submitting a Job}
+  \frametitle{Submitting a Job with LoadLeveler: Send the job to the queue}
       \begin{block}{LoadLeveler}
    \begin{itemize}%[<+-| alert@+>]
 	\item To submit a job\\llsubmit myjob.ll
@@ -884,6 +863,47 @@ cp -pr $SCRATCH_DIR $HOME/OUT/lammps/
    \end{itemize}
   \end{block}
 }
+
+\begin{frame}[fragile,shrink]
+  \frametitle{Submitting a job with SLURM: example job file}
+\begin{block}{Job Description Example : Serial}
+\begin{scriptsize}
+\begin{verbatim}
+#!/bin/bash
+#SBATCH -J Serial_JOB
+#SBATCH -A uoa99999         # Project Account
+#SBATCH --time=01:00:00     # Walltime
+#SBATCH --mem-per-cpu=8132  # memory/core (in MB)
+#SBATCH -C sb               # sb=Sandybridge,wm=Westmere
+
+source /etc/profile
+srun cat ~/inputfile.txt
+\end{verbatim}
+\end{scriptsize}
+  \end{block}
+\end{frame}
+
+
+\begin{frame}[fragile,shrink]
+  \frametitle{Submitting a job with Slurm: example MPI job file}
+     \begin{block}{SLURM job Description Example : MPI}
+\begin{scriptsize}
+\begin{verbatim}
+#!/bin/bash
+#SBATCH -J MPI_JOB
+#SBATCH -A uoa99999         # Project Account
+#SBATCH --time=01:00:00     # Walltime
+#SBATCH --ntasks=2          # number of tasks
+#SBATCH --mem-per-cpu=8132  # memory/core (in MB)
+#SBATCH -C sb               # sb=Sandybridge,wm=Westmere
+
+source /etc/profile
+srun mpi_binary
+\end{verbatim}
+\end{scriptsize}
+  \end{block}
+\end{frame}
+
 
 \frame[t]
 {
@@ -931,7 +951,7 @@ cp -pr $SCRATCH_DIR $HOME/OUT/lammps/
 	\item Share with us a short test and we will study the scalability of your application.
 	\item Try to be accurate  with the walltime, it will help to the LL to schedule the jobs better.
 	\item Be aware that you are sharing resources with other researchers.
-	\item A wrong memory request or a wrong job description setup can potentially affect others.
+	\item A wrong memory request or a wrong job description setup can potentially affect others. (Should be less a problem with SLURM.)
 	\item If we find some case like that, we may be forced to cancel the job with this behavior and inform the owner by email.
    \end{itemize}
   \end{block}

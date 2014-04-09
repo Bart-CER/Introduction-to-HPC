@@ -20,6 +20,6 @@
 \beamer@subsectionintoc {5}{2}{Basic Job Properties}{27}{0}{5}
 \beamer@subsectionintoc {5}{3}{Outputs}{29}{0}{5}
 \beamer@subsectionintoc {5}{4}{Grisu}{31}{0}{5}
-\beamer@subsectionintoc {5}{5}{LoadLeveler}{32}{0}{5}
-\beamer@subsectionintoc {5}{6}{Software}{40}{0}{5}
-\beamer@subsectionintoc {5}{7}{Best practices and advice}{41}{0}{5}
+\beamer@subsectionintoc {5}{5}{LoadLeveler and SLURM}{33}{0}{5}
+\beamer@subsectionintoc {5}{6}{Software}{41}{0}{5}
+\beamer@subsectionintoc {5}{7}{Best practices and advice}{42}{0}{5}
