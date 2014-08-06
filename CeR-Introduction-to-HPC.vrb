@@ -1,18 +1,9 @@
-\frametitle{Submitting a job with Slurm: example MPI job file}
-     \begin{block}{SLURM job Description Example : MPI}
-\begin{scriptsize}
-\begin{verbatim}
-#!/bin/bash
-#SBATCH -J MPI_JOB
-#SBATCH -A uoa99999         # Project Account
-#SBATCH --time=01:00:00     # Walltime
-#SBATCH --ntasks=2          # number of tasks
-#SBATCH --mem-per-cpu=8132  # memory/core (in MB)
-#SBATCH -C sb               # sb=Sandybridge,wm=Westmere
 
-source /etc/profile
-module load myModule
-srun mpi_binary
-\end{verbatim}
-\end{scriptsize}
+  \frametitle{Submitting a Job with Slurm: Send the job to the queue}
+   \begin{block}{Slurm}
+     \begin{itemize}%[<+-| alert@+>]
+\item To submit a job:\\ \begin{verbatim} sbatch myJob.sl \end{verbatim}
+\item To monitor your jobs:\\ \begin{verbatim} squeue –u <myUserId>\end{verbatim}
+\item To cancel:\\ \begin{verbatim} scancel <jobId>\end{verbatim}
+     \end{itemize}
   \end{block}

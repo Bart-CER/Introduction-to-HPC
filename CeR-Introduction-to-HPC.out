@@ -8,16 +8,18 @@
 \BOOKMARK [3][]{Outline0.2.4.10}{Distributed Memory}{Outline0.2}% 8
 \BOOKMARK [2][]{Outline0.3}{Our Facilities}{}% 9
 \BOOKMARK [2][]{Outline0.4}{Using the Cluster}{}% 10
-\BOOKMARK [3][]{Outline0.4.1.18}{Suitable Work}{Outline0.4}% 11
-\BOOKMARK [3][]{Outline0.4.2.19}{What to expect}{Outline0.4}% 12
-\BOOKMARK [3][]{Outline0.4.3.20}{Parallel speedup}{Outline0.4}% 13
-\BOOKMARK [3][]{Outline0.4.4.22}{Data}{Outline0.4}% 14
-\BOOKMARK [3][]{Outline0.4.5.23}{Getting to the Login Node}{Outline0.4}% 15
-\BOOKMARK [2][]{Outline0.5}{Submitting a Job}{}% 16
-\BOOKMARK [3][]{Outline0.5.1.26}{Documentation}{Outline0.5}% 17
-\BOOKMARK [3][]{Outline0.5.2.27}{Basic Job Properties}{Outline0.5}% 18
-\BOOKMARK [3][]{Outline0.5.3.29}{Outputs}{Outline0.5}% 19
-\BOOKMARK [3][]{Outline0.5.4.31}{Grisu}{Outline0.5}% 20
-\BOOKMARK [3][]{Outline0.5.5.33}{LoadLeveler and SLURM}{Outline0.5}% 21
-\BOOKMARK [3][]{Outline0.5.6.41}{Software}{Outline0.5}% 22
-\BOOKMARK [3][]{Outline0.5.7.42}{Best practices and advice}{Outline0.5}% 23
+\BOOKMARK [3][]{Outline0.4.1.15}{Suitable Work}{Outline0.4}% 11
+\BOOKMARK [3][]{Outline0.4.2.16}{What to expect}{Outline0.4}% 12
+\BOOKMARK [3][]{Outline0.4.3.17}{Parallel speedup}{Outline0.4}% 13
+\BOOKMARK [3][]{Outline0.4.4.19}{General overview}{Outline0.4}% 14
+\BOOKMARK [3][]{Outline0.4.5.22}{Getting to the Login Node}{Outline0.4}% 15
+\BOOKMARK [3][]{Outline0.4.6.25}{Data}{Outline0.4}% 16
+\BOOKMARK [2][]{Outline0.5}{Submitting a Job}{}% 17
+\BOOKMARK [3][]{Outline0.5.1.26}{Documentation}{Outline0.5}% 18
+\BOOKMARK [3][]{Outline0.5.2.27}{Basic Job Properties}{Outline0.5}% 19
+\BOOKMARK [3][]{Outline0.5.3.28}{Outputs}{Outline0.5}% 20
+\BOOKMARK [3][]{Outline0.5.4.31}{SLURM}{Outline0.5}% 21
+\BOOKMARK [2][]{Outline0.6}{Additional remarks}{}% 22
+\BOOKMARK [3][]{Outline0.6.1.35}{Notes for Windows Users}{Outline0.6}% 23
+\BOOKMARK [3][]{Outline0.6.2.36}{Software}{Outline0.6}% 24
+\BOOKMARK [3][]{Outline0.6.3.37}{Best practices and advice}{Outline0.6}% 25

@@ -6,6 +6,7 @@
 \usepackage{amsmath, soul, color, multicol, type1cm, verbatim, latexsym, dsfont, float, listings}
 \usepackage[official]{eurosym}
 \usepackage{beamerthemesplit}
+\usepackage{hyperref}
 \usetheme{Frankfurt}
 \usecolortheme{lily}
 %\usefonttheme{structuresmallcapsserif}
@@ -64,7 +65,7 @@
 
 \title{Introduction to HPC Workshop}
 %\subtitle{Computational Science team}
-\author{Center for e-Research \\(eresearch@nesi.org.nz)}
+\author{Center for eResearch \\(eresearch@nesi.org.nz)}
 \date{}
 
 
@@ -96,7 +97,7 @@
 \frame[t]
 {
   \frametitle{About Us}
-     \begin{block}{CER: Center for e-Research}
+     \begin{block}{CER: Center for eResearch}
    \begin{itemize}%[<+-| alert@+>]
 	\item Part of the University of Auckland
 	\item User support and system maintenance 
@@ -312,7 +313,7 @@
   \frametitle{Our Facilities}
       \begin{block}{NeSI CeR Supercomputing Center}
    \begin{itemize}%[<+-| alert@+>]
-	\item funded by the \textbf{University of Auckland}, \textbf{Landcare Research} and the \textbf{University of Otago} with co-investment from the NZ Government through \textbf{NeSI}.
+	\item Funded by the \textbf{University of Auckland}, \textbf{Landcare Research} and the \textbf{University of Otago} with co-investment from the NZ Government through \textbf{NeSI}.
 	\item Currently have around 5,000 Intel CPU cores across about 300 hosts.
 	\item About 3.5 TB of memory and 80 TFLOPS (distributed).
 	\item Shared storage of 400 TB with a 40 Gbit/s Infiniband network.
@@ -391,47 +392,6 @@
 }
 
 \section{Using the Cluster}      
-\frame[t]
-{
-  \frametitle{Using the Cluster}
-      \begin{block}{Using the cluster}
-\begin{center}
- \includegraphics[width=310pt]{NeSI_img/NeSI_compute_path.png}
-\end{center}
-  \end{block}
-}
-
-
-
-\frame[t]
-{
-  \frametitle{Using the Cluster}
-      \begin{block}{Overview}
-   \begin{itemize}%[<+-| alert@+>]
-	\item The cluster is a shared resource and work must be scheduled.% to run at a later time, known as batch scheduling – no GUI.
-	\item Jobs are queued and are executed on the compute nodes.
-	\item The login node is not for running jobs, it is only for file management and job submission.
-   \end{itemize}
-  \end{block}
-  \begin{center}
- \includegraphics[width=200pt]{NeSI_img/NeSI_compute_path.png}
-\end{center}
-}
-\frame[t]
-{
-  \frametitle{Using the Cluster}
-      \begin{block}{Compiling and Testing Software}
-   \begin{itemize}%[<+-| alert@+>]
-	\item In each NeSI facility you will find building/development nodes.
-	\item We have the most up to date development tools ready to use.
-	\item You can build and test your software and then submit a job.
-   \end{itemize}
-  \end{block}
-  \begin{center}
- \includegraphics[width=200pt]{NeSI_img/NeSI_compute_path.png}
-\end{center}
-}
-
 
 \subsection{Suitable Work}
 \frame[t]
@@ -446,7 +406,7 @@
   \end{block}
         \begin{block}{Less suited}
    \begin{itemize}%[<+-| alert@+>]
-	\item Windows only software (work in progress). 
+	\item Windows only software $\mapsto$ Aspirational Research Virtual Machine Farm. 
 	\item Interactive software, e.g.\ GUI, only available for development. 
    \end{itemize}
   \end{block}
@@ -506,24 +466,49 @@
 }
 
 
-\subsection{Data}
+
+\subsection{General overview}
+\frame[t]
+{
+  \frametitle{General overview}
+      \begin{block}{Using the cluster}
+\begin{center}
+ \includegraphics[width=310pt]{NeSI_img/NeSI_compute_path.png}
+\end{center}
+  \end{block}
+}
+
+
+
 \frame[t]
 {
   \frametitle{Using the Cluster}
-      \begin{block}{Data}
+      \begin{block}{Overview}
    \begin{itemize}%[<+-| alert@+>]
-	\item Upload input data to the login node for use on the cluster.
-	\item Download results from the login node to your local drive. 
-	\item The home directory has a rather small quota, project directories can be larger.
-	\item For long term storage and back-up, ask your IT department.
-	\item Things do go wrong, make sure to have a back-up.
-	\item Files on the login node are shared across the build and compute nodes
+	\item The cluster is a shared resource and work must be scheduled.% to run at a later time, known as batch scheduling – no GUI.
+	\item Jobs are queued and are executed on the compute nodes.
+	\item The login node is not for running jobs, it is only for file management and job submission.
    \end{itemize}
-%   \begin{center}
-%   \includegraphics[width=125pt]{NeSI_img/kami23-doubtux.png}
-%   \end{center}
   \end{block}
+  \begin{center}
+ \includegraphics[width=200pt]{NeSI_img/NeSI_compute_path.png}
+\end{center}
 }
+\frame[t]
+{
+  \frametitle{Using the Cluster}
+      \begin{block}{Compiling and Testing Software}
+   \begin{itemize}%[<+-| alert@+>]
+	\item In each NeSI facility you will find building/development nodes.
+	\item We have the most up to date development tools ready to use.
+	\item You can build and test your software and then submit a job.
+   \end{itemize}
+  \end{block}
+  \begin{center}
+ \includegraphics[width=200pt]{NeSI_img/NeSI_compute_path.png}
+\end{center}
+}
+
 
 
 \subsection{Getting to the Login Node}
@@ -602,6 +587,24 @@
 %\end{frame}
 
 
+\subsection{Data}
+\frame[t]
+{
+  \frametitle{Using the Cluster}
+      \begin{block}{Data}
+   \begin{itemize}%[<+-| alert@+>]
+	\item Upload input data to the login node for use on the cluster.
+	\item Download results from the login node to your local drive. 
+	\item The home directory has a rather small quota, project directories can be larger.
+	\item For long term storage and back-up, ask your IT department.
+	\item Things do go wrong, make sure to have a back-up.
+	\item Files on the login node are shared across the build and compute nodes
+   \end{itemize}
+%   \begin{center}
+%   \includegraphics[width=125pt]{NeSI_img/kami23-doubtux.png}
+%   \end{center}
+  \end{block}
+}
 
 \section{Submitting a Job}
 \subsection{Documentation}
@@ -631,7 +634,6 @@
       \begin{block}{Basic Job Properties}
    \begin{itemize}%[<+-| alert@+>]
 	\item \textbf{Name} So you can identify the output later.
-	\item \textbf{Job Type} How many processes and how many threads?
 	%\item \textbf{Command} What command to execute on the cluster e.g "echo hello"
 	\item \textbf{Walltime} How long the job can run for. The job will be cancelled if the walltime is exceeded. 
 	\item \textbf{Memory} How much memory to use? Job will die if memory is exceeded.
@@ -643,24 +645,6 @@
   \end{block}
 }
 
-
-\frame[t]
-{
-  \frametitle{Submitting a Job}
-   \begin{block}{Two (and a half) main tools for submitting a job}
-   \begin{itemize}%[<+-| alert@+>]
-	\item LoadLeveler (LL) – for people comfortable with the Linux command line
-	\item SLURM: will replace LL
-	\item Grisu Template Client – for a graphical interface
-   \end{itemize}
-  \end{block}
-   \begin{block}{Which one to use? In general}
-   \begin{itemize}%[<+-| alert@+>]
-	\item LL/SLURM for complex workflows or large numbers of jobs
-	\item Grisu for very simple workflows or few jobs 
-   \end{itemize}
-  \end{block}
-}
 
 
 
@@ -692,27 +676,6 @@
 }
 
 
-
-\subsection{Grisu}
-\frame[t]
-{
-  \frametitle{Submitting a Job}
-      \begin{block}{Quick Intro to Grisu}
-   \begin{itemize}%[<+-| alert@+>]
-	\item Cross platform Java client: Windows, Mac, Linux
-	\item Grisu interfaces with LoadLeveler to submit and monitor jobs
-	\item Basic workflow:
-	\item Login
-	\item Set requirements
-	\item Attach files
-	\item Submit job
-	\item Wait … check status
-	\item Download results
-   \end{itemize}
-  \end{block}
-}
-
-
 \frame[t]
 {
   \frametitle{Submitting a Job}
@@ -734,131 +697,25 @@
 }
 
 
-\subsection{LoadLeveler and SLURM}
+\subsection{SLURM}
 \frame[t]
 {
   \frametitle{Submitting a Job}
-      \begin{block}{Quick Intro to LoadLeveler and Slurm}
+      \begin{block}{Quick introduction Slurm}
    \begin{itemize}%[<+-| alert@+>]
-	\item You need to access the login node and work from a terminal
+	\item You need to access the login node and work from a terminal.
 	\item Requires basic knowledge of the Linux command line:
    \begin{itemize}%[<+-| alert@+>]
-	\item How to navigate file system and edit files
-	\item Shell scripting is very useful for automation
-	\item Tutorials available online at Software Carpentry – computing basics aimed at researchers
+	\item How to navigate file system and edit files.
+	\item Shell scripting is very useful for automation.
+	\item Tutorials available online at Software Carpentry – computing basics aimed at researchers.
    \end{itemize}
    \end{itemize}
   \end{block}
+  
 }
 
-\begin{frame}[fragile,shrink]
-  \frametitle{Submitting a Job with LoadLeveler: example job file}
-%      \begin{block}{Job Description Example : SMP}
-\begin{verbatim}
-##########################################################################################
-# for detailed information about LoadLeveler job description files, please visit:
-#    - https://wiki.auckland.ac.nz/display/CER/Running+jobs
-#    - https://wiki.auckland.ac.nz/display/CER/LoadLeveler+User+Guide
-#    - https://wiki.auckland.ac.nz/display/CERES/LoadLeveler+-+example+scripts
-##########################################################################################
- 
-#@ job_name         = getting_started_job
-#@ class            = default
-#@ group            = nesi
-#@ account_no       = uoa123456
-#@ wall_clock_limit = 00:01:00
-#@ resources        = ConsumableMemory(2048mb) ConsumableVirtualMemory(2048mb)
-#@ job_type         = serial
-#@ output           = $(home)/getting_started/stdout.txt
-#@ error            = $(home)/getting_started/stderr.txt
-#@ notification     = never
-#@ queue
- 
- 
-# Enforce memory constraints. Value is in KBlet "limit = 2048 * 1024"
-let "limit = 2048 * 1024"
-ulimit -v ${limit} -m ${limit}
- 
-cat ~/inputfile.txt
-\end{verbatim}
-%  \end{block}
-\end{frame}
 
-
-\begin{frame}[fragile,shrink]
-  \frametitle{Submitting a Job }
-\begin{block}{Setup a Job Description for LoadLeveler}
-Can use macros in job attributes
-\begin{verbatim}
-e.g. #@ output  = $(job_name).$(jobid).out
-\end{verbatim}
-MPI jobs
-\begin{verbatim}
-#@ job_type     = MPICH | parallel
-#@ total_tasks  = 16
-#@ blocking     = 4 | unlimited
-\end{verbatim}
-
-GPUs
-\begin{verbatim}
-#@ resources = … GPUDev(1)
-\end{verbatim}
-
-Specific architectures
-\begin{verbatim}
-#@ requirements = (Feature==“sandybridge”)
-#@ requirements = (Feature==“Kepler”)
-\end{verbatim}
-  \end{block}
-\end{frame}
-
-
-\begin{frame}[fragile,shrink]
-  \frametitle{Submitting a Job with LoadLeveler: more complicated job}
-%      \begin{block}{Job Description Example : MPI}
-\begin{verbatim}
-#!/bin/bash
-# Optimized for run parallel job of 512 Cores at NeSI (Pandora-SandyBridge)
-##########################################################################
-#@ job_name         = LL_example
-#@ class            = default
-#@ group            = nesi
-#@ notification     = never
-#@ account_no       = uoa123456
-#@ wall_clock_limit = 00:30:00
-#@ resources        = ConsumableMemory(4096mb) ConsumableVirtualMemory(4096mb)
-#@ job_type         = MPICH
-#@ blocking         = unlimited
-#@ node_usage       = not_shared
-#@ output           = $(job_name).$(jobid).out
-#@ error            = $(job_name).$(jobid).err
-#@ requirements     = (Feature=="sandybridge")
-#@ initialdir       = /projects/uoa123456
-#@ total_tasks      = 512
-#@ queue
-##########################################################################
-module load myModule
-
-MPIRUN mpi_binary
-
-\end{verbatim}
-%  \end{block}
-\end{frame}
-
-
-
-\frame[t]
-{
-  \frametitle{Submitting a Job with LoadLeveler: Send the job to the queue}
-      \begin{block}{LoadLeveler}
-   \begin{itemize}%[<+-| alert@+>]
-	\item To submit a job\\llsubmit myjob.ll
-	\item To monitor a job\\llq –u “myuserid”
-	\item Shows job id and status – R, I, etc
-	\item To cancel\\llcancel “jobid”
-   \end{itemize}
-  \end{block}
-}
 
 \begin{frame}[fragile,shrink]
   \frametitle{Submitting a job with SLURM: example job file}
@@ -869,14 +726,13 @@ MPIRUN mpi_binary
 #SBATCH -J Serial_JOB
 #SBATCH -A uoa99999         # Project Account
 #SBATCH --time=01:00:00     # Walltime
-#SBATCH --mem-per-cpu=8132  # memory/core (in MB)
-#SBATCH -C sb               # sb=Sandybridge,wm=Westmere
+#SBATCH --mem-per-cpu=4096  # memory/core (in MB)
 
-source /etc/profile
 srun cat ~/inputfile.txt
 \end{verbatim}
 \end{scriptsize}
   \end{block}
+{\tiny Also see \url{https://wiki.auckland.ac.nz/display/CER/Slurm+User+Guide}}
 \end{frame}
 
 
@@ -890,26 +746,44 @@ srun cat ~/inputfile.txt
 #SBATCH -A uoa99999         # Project Account
 #SBATCH --time=01:00:00     # Walltime
 #SBATCH --ntasks=2          # number of tasks
-#SBATCH --mem-per-cpu=8132  # memory/core (in MB)
-#SBATCH -C sb               # sb=Sandybridge,wm=Westmere
+#SBATCH --mem-per-cpu=4096 # memory/core (in MB)
 
-source /etc/profile
 module load myModule
 srun mpi_binary
 \end{verbatim}
 \end{scriptsize}
   \end{block}
+  
+{\tiny Also see \url{https://wiki.auckland.ac.nz/display/CER/Slurm+User+Guide}}
 \end{frame}
 
 
+\begin{frame}[fragile]
+
+  \frametitle{Submitting a Job with Slurm: Send the job to the queue}
+   \begin{block}{Slurm}
+     \begin{itemize}%[<+-| alert@+>]
+	\item To submit a job:\\ \begin{verbatim} sbatch myJob.sl \end{verbatim}
+	\item To monitor your jobs:\\ \begin{verbatim} squeue –u <myUserId>\end{verbatim}
+	\item To cancel:\\ \begin{verbatim} scancel <jobId>\end{verbatim}
+     \end{itemize}
+  \end{block}
+\end{frame}
+
+
+\section{Additional remarks}
+
+\subsection{Notes for Windows Users}
+
 \frame[t]
 {
-  \frametitle{Submitting a Job}
-      \begin{block}{Notes for Windows Users}
+  \frametitle{Notes for Windows Users}
+      \begin{block}{}
    \begin{itemize}%[<+-| alert@+>]
-	\item Be careful of Windows end of line (EOL) characters, sometimes Linux will not handle them correctly
-	\item Notepad++ lets you convert between Windows and Unix style line endings
-	\item Even though you can avoid using the Linux command line, having a basic understanding will help you debug your jobs
+	\item Be careful of Windows end of line (EOL) characters, sometimes Linux will not handle them correctly.
+	\item MobaXterm has a build in text file editor. 
+	\item Notepad++ lets you convert between Windows and Unix style line endings.
+	\item Even though you can avoid using the Linux command line, having a basic understanding will help you debug your jobs.
    \end{itemize}
   \end{block}
 }
@@ -920,12 +794,12 @@ srun mpi_binary
 \subsection{Software}
 \frame[t]
 {
-  \frametitle{Submitting a Job}
-      \begin{block}{Software}
+  \frametitle{Software}
+      \begin{block}{}
    \begin{itemize}%[<+-| alert@+>]
-	\item We have many specialised software packages.
+	\item We have many specialized software packages.
 	\item Best way to see what we have is by checking the wiki. %running module avail on the login node
-	\item The Wiki also has a software section
+	\item The Wiki also has a software section.
 	\item We can install software that you need:
    \begin{itemize}%[<+-| alert@+>]
 	\item Linux version of the software.
@@ -942,13 +816,13 @@ srun mpi_binary
 
 \frame[t]
 {
-  \frametitle{Submitting a Job}
-   \begin{block}{Best practices and advice}
+  \frametitle{Best practices and advice}
+   \begin{block}{}
    \begin{itemize}%[<+-| alert@+>]
 	\item Share with us a short test and we will study the scalability of your application.
-	\item Try to be accurate  with the walltime, it will help to the LL to schedule the jobs better.
+	\item Try to be accurate  with the wall-time, it will help the scheduler to efficiently schedule the jobs.
 	\item Be aware that you are sharing resources with other researchers.
-	\item A wrong memory request or a wrong job description setup can potentially affect others. (Should be less a problem with SLURM.)
+	\item A wrong memory request or a wrong job description setup can potentially affect others.
 	\item If we find some case like that, we may be forced to cancel the job with this behavior and inform the owner by email.
    \end{itemize}
   \end{block}
