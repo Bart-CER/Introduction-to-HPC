@@ -1,7 +1,7 @@
 \beamer@endinputifotherversion {3.24pt}
 \select@language {english}
 \beamer@sectionintoc {1}{About Us}{3}{0}{1}
-\beamer@subsectionintoc {1}{1}{About CER and NeSI}{3}{0}{1}
+\beamer@subsectionintoc {1}{1}{About CeR and NeSI}{3}{0}{1}
 \beamer@subsectionintoc {1}{2}{The CS Team}{5}{0}{1}
 \beamer@sectionintoc {2}{Key Concepts}{7}{0}{2}
 \beamer@subsectionintoc {2}{1}{What is a Cluster}{7}{0}{2}
