@@ -65,7 +65,7 @@
 
 \title{Introduction to HPC Workshop}
 %\subtitle{Computational Science team}
-\author{Center for eResearch \\(eresearch@nesi.org.nz)}
+\author{Centre for eResearch \\(eresearch@nesi.org.nz)}
 \date{}
 
 
@@ -97,7 +97,7 @@
 \frame[t]
 {
   \frametitle{About Us}
-     \begin{block}{CeR: Center for eResearch}
+     \begin{block}{CeR: Centre for eResearch}
    \begin{itemize}%[<+-| alert@+>]
 	\item Part of the University of Auckland
 	\item User support and system maintenance 
@@ -213,7 +213,7 @@
       \begin{block}{Parallel Programming}
    \begin{itemize}%[<+-| alert@+>]
 	\item There are several ways to make a program use more cores and hence run faster.
-	\item Many scientific software applications will be able to use multiple cores in some way. But this is often done explicitly by the user, not automagically.
+	\item Many scientific software applications are written to take advantage of multiple cores in some way. But often this must be specifically requested by the user at the time he runs the program, rather than happening automagically.
 	\item We can help you improve the performance of your code or make better use of your application.
    \end{itemize}
   \end{block}
@@ -225,8 +225,8 @@
   \frametitle{Key Concepts}
       \begin{block}{Shared Memory}
    \begin{itemize}%[<+-| alert@+>]
-	\item Symmetric multiprocessing (SMP) : two or more identical processors are connected to a single shared main memory.
-	\item This shared memory may be simultaneously accessed by single program using multiple threads.
+	\item Symmetric multiprocessing (SMP): two or more identical processors are connected to the same main memory.
+	\item The program can divide tasks up between several threads. Each thread has access to all the program's data.
 	\item There are different frameworks for utilizing SMP capabilities.
    \end{itemize}
 \begin{center}
@@ -292,32 +292,39 @@
 {
   \frametitle{Our Facilities}
       \begin{block}{NeSI Facilities}
-   \begin{itemize}%[<+-| alert@+>]
-	\item NeSI provides several kind of HPC architectures and solutions to cater for various needs.
+   NeSI provides several HPC architectures and solutions to cater for various needs:
      \begin{itemize}
-     	\item Bluegene/P
+     	\item BlueGene/P
 	    \item Power6 and Power7
    		\item Intel Westmere
 		\item Intel SandyBridge
 		\item Kepler and Fermi GPU servers
 		\item Intel Xeon Phi Co-Processor
    \end{itemize}
-	\item Supported applications can run on across several NeSI architectures.% but for some of them there are more suitable architecture.
-	\item We can install and study the scalability in all the NeSI resources and find the most suitable environment for your case.
-	\item See NeSI website for facility specs and application details.
-   \end{itemize}
   \end{block}
 }
 \frame[t]
 {
   \frametitle{Our Facilities}
-      \begin{block}{NeSI CeR Supercomputing Center}
+      \begin{block}{NeSI Facilities}
+   \begin{itemize}%[<+-| alert@+>]
+	\item Many (though not all) supported applications can run on multiple NeSI architectures.% but for some of them there are more suitable architecture.
+	\item We can install and test an application on all supported NeSI architectures and find the most suitable environment for your case.
+	\item See the NeSI website for facility specifications and application details.
+   \end{itemize}
+  \end{block}
+}
+
+\frame[t]
+{
+  \frametitle{Our Facilities}
+      \begin{block}{Pan, the NeSI CeR Supercomputing Centre}
    \begin{itemize}%[<+-| alert@+>]
 	\item Funded by the \textbf{University of Auckland}, \textbf{Landcare Research} and the \textbf{University of Otago} with co-investment from the NZ Government through \textbf{NeSI}.
 	\item Currently have around 5,000 Intel CPU cores across about 300 hosts.
-	\item About 3.5 TB of memory and 80 TFLOPS (distributed).
-	\item Shared storage of 400 TB with a 40 Gbit/s Infiniband network.
-	\item Linux RHEL 6.3
+	\item About 3.5 TB of memory and 80 TFLOPs (distributed).
+	\item Shared storage of 400 TB with a 40 Gbit/s InfiniBand network.
+	\item Runs Red Hat Enterprise Linux 6.3 as the operating system.
    \end{itemize}
   \end{block}
 }
@@ -397,7 +404,7 @@
 \frame[t]
 {
   \frametitle{What to expect}
-      \begin{block}{Suitable Work}
+      \begin{block}{Suitable work}
    \begin{itemize}%[<+-| alert@+>]
 	\item Problems that can be solved with parallel processing.
 	\item Problems that consume large amounts of memory.
@@ -406,7 +413,7 @@
   \end{block}
         \begin{block}{Less suited}
    \begin{itemize}%[<+-| alert@+>]
-	\item Windows only software $\mapsto$ Aspirational Research Virtual Machine Farm. 
+	\item Windows-only software $\mapsto$ Aspirational Research Virtual Machine Farm. 
 	\item Interactive software, e.g.\ GUI, only available for development. 
    \end{itemize}
   \end{block}
@@ -417,12 +424,12 @@
 \frame[t]
 {
   \frametitle{What to expect}
-      \begin{block}{Suitable Work}
+      \begin{block}{Scaling behaviour}
    \begin{itemize}%[<+-| alert@+>]
-	\item Some problems are ``embarrassingly parallel'' i.e.\ it is trivial to divide the problem and solve independently.\\e.g. run simulation with 1000 different initial conditions.
+	\item Some problems are ``embarrassingly parallel'', i.e.\, it is trivial to divide the problem and solve independently.\\For instance, you could run the same simulation with 1000 different initial conditions.
 	\item Approximately linear speedup.
-	\item Other problems have dependencies, they cannot be separated\\e.g. simulate the weather.
-	\item Speed up depends what \% of the program runtime can be parallelised.
+	\item Other problems have dependencies, they cannot be separated\\e.g. simulating the weather.
+	\item Speedup depends what \% of the program runtime can be parallelised.
    \end{itemize}
   \end{block}
 }
@@ -453,11 +460,11 @@
    \begin{itemize}%[<+-| alert@+>]
 	\item Single core computation time: computation only.
 	\item Parallel computation time: computation + communication + waiting.
-	\item E.g.
+	\item For example:
 	\begin{itemize}
-	\item writing results (to one file) is often a bottleneck.
-	\item Small problem on many cores: communication cost will dominate.
-	\item Unbalanced load: one core will mainly wait on the other.
+	\item Writing results (to one file) is often a bottleneck.
+	\item Small problem on many cores: communication costs will dominate.
+	\item Unbalanced load: one slow core will hold up all the others.
 	\end{itemize}
 	\item Conclusion: Test which number of cores is best suited for your problem. 
    \end{itemize}
@@ -500,7 +507,7 @@
       \begin{block}{Compiling and Testing Software}
    \begin{itemize}%[<+-| alert@+>]
 	\item In each NeSI facility you will find building/development nodes.
-	\item We have the most up to date development tools ready to use.
+	\item We have the most up-to-date development tools ready to use.
 	\item You can build and test your software and then submit a job.
    \end{itemize}
   \end{block}
@@ -516,13 +523,13 @@
 {
   \frametitle{Using the Cluster}
       \begin{block}{Connection via SSH}
-      Each terminal client has its own way of using the Secure Shell (SSH) protocol
+      There is software available for each desktop operating system that implements the Secure Shell (SSH) protocol:
         \begin{itemize}
-        \item Windows: \href{http://mobaxterm.mobatek.net/}{mobaxterm}
-        \item MacOSX: Terminal(Included in the OS), \href{http://www.iterm2.com/}{iTerm2}
-        \item Linux: \href{http://konsole.kde.org/}{Konsole}, GnomeTerminal, \href{http://yakuake.kde.org/}{yakuake}
+        \item Windows: \href{http://mobaxterm.mobatek.net/}{MobaXterm} (third-party, not included with the OS)
+        \item Mac OS X: Terminal (shipped with the OS), \href{http://www.iterm2.com/}{iTerm2} (third-party, not included)
+        \item Linux: \href{http://konsole.kde.org/}{Konsole}, Gnome Terminal, \href{http://yakuake.kde.org/}{Yakuake}
         \end{itemize}
-        On Unix based systems you need to do something like:\\ssh \url{jbon007@login.nesi.org.nz}
+        Whichever terminal you use, you will need to run a command like:\\ssh \url{jbon007@login.uoa.nesi.org.nz}
       \end{block}
 }
 
@@ -530,23 +537,23 @@
 \frame[t]
 {
   \frametitle{Using the Cluster}
-  \begin{block}{Each NeSI Supercomputing Center has one or more Login Nodes}
+  \begin{block}{Each NeSI Supercomputing Centre has one or more Login Nodes}
    \begin{itemize}%[<+-| alert@+>]
 	\item \textbf{CeR}
 	   \begin{itemize}%[<+-| alert@+>]
-	    \item {\url{login.uoa.nesi.org.nz}} which is the RHEL linux login node.
+	    \item {\url{login.uoa.nesi.org.nz}}, the Red Hat login node.
 	    %\item visual.uoa.nesi.org.nz  which is the Visualization Cluster login node.
        \end{itemize}
-	\item \textbf{Bluefern}
+	\item \textbf{BlueFern}
 	   \begin{itemize}%[<+-| alert@+>]
-	    \item \url{kerr.canterbury.ac.nz} which is the AIX unix login node.
-	    \item {\url{beatrice.canterbury.ac.nz}} which is the SUSE linux login node.
-	    \item {\url{foster.canterbury.ac.nz}} which is the BlueGene/P login node
-	    \item {\url{popper.canterbury.ac.nz}} which is the Visualization Cluster login node.
+	    \item {\url{kerr.canterbury.ac.nz}}, the AIX login node.
+	    \item {\url{beatrice.canterbury.ac.nz}}, the SUSE Linux login node.
+	    \item {\url{foster.canterbury.ac.nz}}, the BlueGene/P login node
+	    \item {\url{popper.canterbury.ac.nz}}, the Visualization Cluster login node.
    \end{itemize}
    	\item \textbf{NIWA}
 	   \begin{itemize}%[<+-| alert@+>]
-	    \item {\url{fitzroy.nesi.org.nz}} which is the AIX unix login node.
+	    \item {\url{fitzroy.nesi.org.nz}}, the AIX login node.
       \end{itemize}
    \end{itemize}
   \end{block}
@@ -558,12 +565,12 @@
       \begin{block}{Remote File System Access}
        In order to access the file system (/home) remotely from your machine, we recommend:
         \begin{itemize}
-        \item \textbf{Windows} (mobaxterm) : \href{http://mobaxterm.mobatek.net/}{mobaxterm}
-        \item \textbf{Windows} (SSHFS) : \url{http://code.google.com/p/win-sshfs/}
-        \item \textbf{MacOSX} (SSHFS) : \url{http://code.google.com/p/macfuse/}
-        \item \textbf{Linux} (SSHFS) : \url{http://fuse.sourceforge.net/sshfs.html}
-        \item \textbf{KDE} (Konqueror) : type fish://user@host:port
-        \item \textbf{Gnome} (Nautilus) : type sftp://user@host:port
+        \item \textbf{Windows} (mobaxterm): \href{http://mobaxterm.mobatek.net/}{mobaxterm}
+        \item \textbf{Windows} (SSHFS): \url{http://code.google.com/p/win-sshfs/}
+        \item \textbf{MacOSX} (SSHFS): \url{http://code.google.com/p/macfuse/}
+        \item \textbf{Linux} (SSHFS): \url{http://fuse.sourceforge.net/sshfs.html}
+        \item \textbf{KDE} (Konqueror): type fish://user@host:port
+        \item \textbf{Gnome} (Nautilus): type sftp://user@host:port
       \end{itemize}
       \end{block}
 \end{frame}
@@ -595,10 +602,10 @@
    \begin{itemize}%[<+-| alert@+>]
 	\item Upload input data to the login node for use on the cluster.
 	\item Download results from the login node to your local drive. 
-	\item The home directory has a rather small quota, project directories can be larger.
-	\item For long term storage and back-up, ask your IT department.
-	\item Things do go wrong, make sure to have a back-up.
-	\item Files on the login node are shared across the build and compute nodes
+	\item Your home directory has a small quota. Project directories are significantly larger.
+	\item Things do go wrong. Keep your own backups of anything important.
+	\item For long-term storage and backups, consult your institution's IT department.
+	\item Files on the login node are shared across the build and compute nodes.
    \end{itemize}
 %   \begin{center}
 %   \includegraphics[width=125pt]{NeSI_img/kami23-doubtux.png}
@@ -613,15 +620,15 @@
   \frametitle{Submitting a Job}
       \begin{block}{Documentation}
    \begin{itemize}%[<+-| alert@+>]
-	\item Center specific documentation:
+	\item Centre-specific documentation:
 	\begin{itemize}
-	\item Bluefern : \url{http://wiki.canterbury.ac.nz/display/BlueFern}
-	\item NIWA : \url{http://teamwork.niwa.co.nz/display/HPCF/NIWA+HPCF+User+Documentation}
-	\item CeR : \url{http://wiki.auckland.ac.nz/display/CER/}
+	\item Bluefern: \url{http://wiki.canterbury.ac.nz/display/BlueFern}
+	\item NIWA: \url{http://teamwork.niwa.co.nz/display/HPCF/NIWA+HPCF+User+Documentation}
+	\item CeR: \url{http://wiki.auckland.ac.nz/display/CER/}
 	\end{itemize}
 	\item Examples for submitting jobs are on our Wiki page 
-	\item See the ''Getting Started section''
-	\item Take a look to the Quick Reference Guide. \url{http://goo.gl/ytbRWy}
+	\item See the ``Getting Started'' section
+	\item Take a look at the Quick Reference Guide: \url{http://goo.gl/ytbRWy}
 	\item You will also find links to available software on the cluster
    \end{itemize}
   \end{block}
@@ -633,14 +640,14 @@
   \frametitle{Submitting a Job}
       \begin{block}{Basic Job Properties}
    \begin{itemize}%[<+-| alert@+>]
-	\item \textbf{Name} So you can identify the output later.
+	\item \textbf{Name}: For easily identifying the job (in the queue) and its output files.
 	%\item \textbf{Command} What command to execute on the cluster e.g "echo hello"
-	\item \textbf{Walltime} How long the job can run for. The job will be cancelled if the walltime is exceeded. 
-	\item \textbf{Memory} How much memory to use? Job will die if memory is exceeded.
-	\item \textbf{CPU cores} How many to use? Your program may try to use more than you request e.g.\ MATLAB.
+	\item \textbf{Walltime}: How long can the job run for? The job will be killed if it runs out of time. 
+	\item \textbf{Memory}: How much to use? The job will die if it needs more memory than you allow.
+	\item \textbf{CPU cores}: How many to use? Some programs try to use more cores than they are allocated, e.g.\ MATLAB.
 	%\item \textbf{Files} You need to specify where additional files can be found and change references in your scripts
-	\item \textbf{Account, Project or Group information} Especially important for access to licensed software and funded research allocations
-	\item \textbf{Emails} Notification of job starting, also scheduler errors.
+	\item \textbf{Account information}: Especially important for access to funded research allocations
+	\item \textbf{Emails}: Whom, and in what circumstances, the scheduler will notify about changes to the job status.
    \end{itemize}
   \end{block}
 }
@@ -655,7 +662,7 @@
       \begin{block}{Outputs}
    \begin{center}
    \includegraphics[width=200pt]{NeSI_img/console.png}\\
-      Jobs have no interactive interface, but command line output and can write to files. Graphical tools are, however, available on the login and build/development nodes.
+      Jobs have no interactive interface, but write to files. Text written to the command line output and error channels will also be collected in files. Limited graphical tools are available on the login and build/development nodes.
    \end{center}      
   \end{block}
 }
@@ -666,11 +673,11 @@
   \frametitle{Submitting a Job}
       \begin{block}{Outputs}
    \begin{itemize}%[<+-| alert@+>]
-	\item Information output while the job runs is written to a text file.
-	\item Standard output goes to stdout, standard error goes to stderr.
-	\item These should have unique names for a given job directory (see job Name)
-	\item If your application writes to other files e.g.\ output data, that stays the same
-	\item When your job fails, first look at stdout and stderr for clues
+	\item Information output while the job runs is written to a text file
+	\item Standard output and standard error are written to files named after the job, unless you specify different names
+	\item These should have unique names for a given job directory (see job name)
+	\item Other files produced during the job will keep their expected names, e.g.\ output data
+	\item When your job fails, first look at the output and error files for clues
    \end{itemize}
   \end{block}
 }
@@ -683,15 +690,14 @@
    \begin{itemize}%[<+-| alert@+>]
 	\item Modules are a convenient way to provide access to applications on the cluster
 	\item They prepare the environment you need to run the application
-	\item Commands
+	\item Some useful commands:
         \begin{itemize}
-        \item  \textbf{module avail} - lists available modules
+        \item  \textbf{module avail} - lists available modules.
         \item  \textbf{module show module\_name} - displays full information about the module with name \textit{module\_name}.
         \item  \textbf{module load module\_name} - loads the module with name \textit{module\_name} and its dependencies. 
         \item  \textbf{module unload module\_name } - unload  the module with name \textit{module\_name} and its dependencies. 
         \item  \textbf{module list} - list all modules currently loaded.
         \end{itemize}
-	\item Grisu loads a module when you select an application
    \end{itemize}
   \end{block}
 }
@@ -701,12 +707,12 @@
 \frame[t]
 {
   \frametitle{Submitting a Job}
-      \begin{block}{Quick introduction Slurm}
+      \begin{block}{Quick introduction to Slurm}
    \begin{itemize}%[<+-| alert@+>]
 	\item You need to access the login node and work from a terminal.
 	\item Requires basic knowledge of the Linux command line:
    \begin{itemize}%[<+-| alert@+>]
-	\item How to navigate file system and edit files.
+	\item How to navigate the file system and edit text files.
 	\item Shell scripting is very useful for automation.
 	\item Tutorials available online at Software Carpentry – computing basics aimed at researchers.
    \end{itemize}
@@ -719,14 +725,14 @@
 
 \begin{frame}[fragile,shrink]
   \frametitle{Submitting a job with SLURM: example job file}
-\begin{block}{Job Description Example : Serial}
+\begin{block}{Job Description Example: Serial}
 \begin{scriptsize}
 \begin{verbatim}
 #!/bin/bash
-#SBATCH -J Serial_JOB
+#SBATCH -J MySerialJob
 #SBATCH -A uoa99999         # Project Account
 #SBATCH --time=01:00:00     # Walltime
-#SBATCH --mem-per-cpu=4096  # memory/core (in MB)
+#SBATCH --mem-per-cpu=4096  # Memory per core (in MB)
 
 srun cat ~/inputfile.txt
 \end{verbatim}
@@ -738,15 +744,15 @@ srun cat ~/inputfile.txt
 
 \begin{frame}[fragile,shrink]
   \frametitle{Submitting a job with Slurm: example MPI job file}
-     \begin{block}{SLURM job Description Example : MPI}
+     \begin{block}{SLURM job Description Example: MPI}
 \begin{scriptsize}
 \begin{verbatim}
 #!/bin/bash
-#SBATCH -J MPI_JOB
+#SBATCH -J MyMPIJob
 #SBATCH -A uoa99999         # Project Account
 #SBATCH --time=01:00:00     # Walltime
 #SBATCH --ntasks=2          # number of tasks
-#SBATCH --mem-per-cpu=4096 # memory/core (in MB)
+#SBATCH --mem-per-cpu=4096  # Memory per core (in MB)
 
 module load myModule
 srun mpi_binary
@@ -780,9 +786,10 @@ srun mpi_binary
   \frametitle{Notes for Windows Users}
       \begin{block}{}
    \begin{itemize}%[<+-| alert@+>]
-	\item Be careful of Windows end of line (EOL) characters, sometimes Linux will not handle them correctly.
+	\item Be careful of Windows end of line (EOL) characters, as Linux applications often handle them poorly.
 	\item MobaXterm has a build in text file editor. 
 	\item Notepad++ lets you convert between Windows and Unix style line endings.
+	\item The command line program dos2unix, on the cluster, does the same.
 	\item Even though you can avoid using the Linux command line, having a basic understanding will help you debug your jobs.
    \end{itemize}
   \end{block}
@@ -798,7 +805,7 @@ srun mpi_binary
       \begin{block}{}
    \begin{itemize}%[<+-| alert@+>]
 	\item We have many specialized software packages.
-	\item Best way to see what we have is by checking the wiki. %running module avail on the login node
+	\item The best way to see what we have is by checking the wiki. %running module avail on the login node
 	\item The Wiki also has a software section.
 	\item We can install software that you need:
    \begin{itemize}%[<+-| alert@+>]
@@ -806,7 +813,7 @@ srun mpi_binary
 	\item Command line mode without user interaction.
 	\item Interaction possible for small tests on the build nodes. 
 	\item We don't provide licenses.
-	\item You can install software in your home directory if it is really esoteric.
+	\item You may also install software in your home or project directory.
    \end{itemize}
    \end{itemize}
   \end{block}
@@ -820,10 +827,10 @@ srun mpi_binary
    \begin{block}{}
    \begin{itemize}%[<+-| alert@+>]
 	\item Share with us a short test and we will study the scalability of your application.
-	\item Try to be accurate  with the wall-time, it will help the scheduler to efficiently schedule the jobs.
+	\item Try to be accurate with the wall-time, it will help the scheduler to efficiently schedule the jobs.
 	\item Be aware that you are sharing resources with other researchers.
 	\item A wrong memory request or a wrong job description setup can potentially affect others.
-	\item If we find some case like that, we may be forced to cancel the job with this behavior and inform the owner by email.
+	\item If your job uses excessive resources or misbehaves, we may be forced to cancel it and inform you by email.
    \end{itemize}
   \end{block}
 }
@@ -837,7 +844,7 @@ srun mpi_binary
       \begin{block}{Our Expectations}
    \begin{itemize}%[<+-| alert@+>]
 	\item We have an acceptable use policy that follows the NeSI IT policies
-	\item We conduct regular reviews of projects to	:
+	\item We conduct regular reviews of projects to:
    \begin{itemize}%[<+-| alert@+>]
 	\item see how you are going and if you could use some help
 	\item collect any research outputs from your work on our facility

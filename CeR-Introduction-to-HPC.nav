@@ -1,4 +1,4 @@
-\beamer@endinputifotherversion {3.24pt}
+\beamer@endinputifotherversion {3.26pt}
 \headcommand {\slideentry {0}{0}{1}{1/1}{}{0}}
 \headcommand {\beamer@framepages {1}{1}}
 \headcommand {\slideentry {0}{0}{2}{2/2}{}{0}}
@@ -43,80 +43,82 @@
 \headcommand {\beamer@framepages {13}{13}}
 \headcommand {\slideentry {3}{1}{4}{14/14}{}{0}}
 \headcommand {\beamer@framepages {14}{14}}
-\headcommand {\sectionentry {4}{Using the Cluster}{15}{Using the Cluster}{0}}
-\headcommand {\beamer@sectionpages {11}{14}}
-\headcommand {\beamer@subsectionpages {11}{14}}
-\headcommand {\beamer@subsectionentry {0}{4}{1}{15}{Suitable Work}}\headcommand {\beamer@subsectionpages {15}{14}}
-\headcommand {\slideentry {4}{1}{1}{15/15}{Suitable Work}{0}}
+\headcommand {\slideentry {3}{1}{5}{15/15}{}{0}}
 \headcommand {\beamer@framepages {15}{15}}
-\headcommand {\beamer@subsectionentry {0}{4}{2}{16}{What to expect}}\headcommand {\beamer@subsectionpages {15}{15}}
-\headcommand {\slideentry {4}{2}{1}{16/16}{What to expect}{0}}
+\headcommand {\sectionentry {4}{Using the Cluster}{16}{Using the Cluster}{0}}
+\headcommand {\beamer@sectionpages {11}{15}}
+\headcommand {\beamer@subsectionpages {11}{15}}
+\headcommand {\beamer@subsectionentry {0}{4}{1}{16}{Suitable Work}}\headcommand {\beamer@subsectionpages {16}{15}}
+\headcommand {\slideentry {4}{1}{1}{16/16}{Suitable Work}{0}}
 \headcommand {\beamer@framepages {16}{16}}
-\headcommand {\beamer@subsectionentry {0}{4}{3}{17}{Parallel speedup}}\headcommand {\beamer@subsectionpages {16}{16}}
-\headcommand {\slideentry {4}{3}{1}{17/17}{Parallel speedup}{0}}
+\headcommand {\beamer@subsectionentry {0}{4}{2}{17}{What to expect}}\headcommand {\beamer@subsectionpages {16}{16}}
+\headcommand {\slideentry {4}{2}{1}{17/17}{What to expect}{0}}
 \headcommand {\beamer@framepages {17}{17}}
-\headcommand {\slideentry {4}{3}{2}{18/18}{Parallel speedup}{0}}
+\headcommand {\beamer@subsectionentry {0}{4}{3}{18}{Parallel speedup}}\headcommand {\beamer@subsectionpages {17}{17}}
+\headcommand {\slideentry {4}{3}{1}{18/18}{Parallel speedup}{0}}
 \headcommand {\beamer@framepages {18}{18}}
-\headcommand {\beamer@subsectionentry {0}{4}{4}{19}{General overview}}\headcommand {\beamer@subsectionpages {17}{18}}
-\headcommand {\slideentry {4}{4}{1}{19/19}{General overview}{0}}
+\headcommand {\slideentry {4}{3}{2}{19/19}{Parallel speedup}{0}}
 \headcommand {\beamer@framepages {19}{19}}
-\headcommand {\slideentry {4}{4}{2}{20/20}{General overview}{0}}
+\headcommand {\beamer@subsectionentry {0}{4}{4}{20}{General overview}}\headcommand {\beamer@subsectionpages {18}{19}}
+\headcommand {\slideentry {4}{4}{1}{20/20}{General overview}{0}}
 \headcommand {\beamer@framepages {20}{20}}
-\headcommand {\slideentry {4}{4}{3}{21/21}{General overview}{0}}
+\headcommand {\slideentry {4}{4}{2}{21/21}{General overview}{0}}
 \headcommand {\beamer@framepages {21}{21}}
-\headcommand {\beamer@subsectionentry {0}{4}{5}{22}{Getting to the Login Node}}\headcommand {\beamer@subsectionpages {19}{21}}
-\headcommand {\slideentry {4}{5}{1}{22/22}{Getting to the Login Node}{0}}
+\headcommand {\slideentry {4}{4}{3}{22/22}{General overview}{0}}
 \headcommand {\beamer@framepages {22}{22}}
-\headcommand {\slideentry {4}{5}{2}{23/23}{Getting to the Login Node}{0}}
+\headcommand {\beamer@subsectionentry {0}{4}{5}{23}{Getting to the Login Node}}\headcommand {\beamer@subsectionpages {20}{22}}
+\headcommand {\slideentry {4}{5}{1}{23/23}{Getting to the Login Node}{0}}
 \headcommand {\beamer@framepages {23}{23}}
-\headcommand {\slideentry {4}{5}{3}{24/24}{Getting to the Login Node}{0}}
+\headcommand {\slideentry {4}{5}{2}{24/24}{Getting to the Login Node}{0}}
 \headcommand {\beamer@framepages {24}{24}}
-\headcommand {\beamer@subsectionentry {0}{4}{6}{25}{Data}}\headcommand {\beamer@subsectionpages {22}{24}}
-\headcommand {\slideentry {4}{6}{1}{25/25}{Data}{0}}
+\headcommand {\slideentry {4}{5}{3}{25/25}{Getting to the Login Node}{0}}
 \headcommand {\beamer@framepages {25}{25}}
-\headcommand {\sectionentry {5}{Submitting a Job}{26}{Submitting a Job}{0}}
-\headcommand {\beamer@sectionpages {15}{25}}
-\headcommand {\beamer@subsectionpages {25}{25}}
-\headcommand {\beamer@subsectionentry {0}{5}{1}{26}{Documentation}}\headcommand {\beamer@subsectionpages {26}{25}}
-\headcommand {\slideentry {5}{1}{1}{26/26}{Documentation}{0}}
+\headcommand {\beamer@subsectionentry {0}{4}{6}{26}{Data}}\headcommand {\beamer@subsectionpages {23}{25}}
+\headcommand {\slideentry {4}{6}{1}{26/26}{Data}{0}}
 \headcommand {\beamer@framepages {26}{26}}
-\headcommand {\beamer@subsectionentry {0}{5}{2}{27}{Basic Job Properties}}\headcommand {\beamer@subsectionpages {26}{26}}
-\headcommand {\slideentry {5}{2}{1}{27/27}{Basic Job Properties}{0}}
+\headcommand {\sectionentry {5}{Submitting a Job}{27}{Submitting a Job}{0}}
+\headcommand {\beamer@sectionpages {16}{26}}
+\headcommand {\beamer@subsectionpages {26}{26}}
+\headcommand {\beamer@subsectionentry {0}{5}{1}{27}{Documentation}}\headcommand {\beamer@subsectionpages {27}{26}}
+\headcommand {\slideentry {5}{1}{1}{27/27}{Documentation}{0}}
 \headcommand {\beamer@framepages {27}{27}}
-\headcommand {\beamer@subsectionentry {0}{5}{3}{28}{Outputs}}\headcommand {\beamer@subsectionpages {27}{27}}
-\headcommand {\slideentry {5}{3}{1}{28/28}{Outputs}{0}}
+\headcommand {\beamer@subsectionentry {0}{5}{2}{28}{Basic Job Properties}}\headcommand {\beamer@subsectionpages {27}{27}}
+\headcommand {\slideentry {5}{2}{1}{28/28}{Basic Job Properties}{0}}
 \headcommand {\beamer@framepages {28}{28}}
-\headcommand {\slideentry {5}{3}{2}{29/29}{Outputs}{0}}
+\headcommand {\beamer@subsectionentry {0}{5}{3}{29}{Outputs}}\headcommand {\beamer@subsectionpages {28}{28}}
+\headcommand {\slideentry {5}{3}{1}{29/29}{Outputs}{0}}
 \headcommand {\beamer@framepages {29}{29}}
-\headcommand {\slideentry {5}{3}{3}{30/30}{Outputs}{0}}
+\headcommand {\slideentry {5}{3}{2}{30/30}{Outputs}{0}}
 \headcommand {\beamer@framepages {30}{30}}
-\headcommand {\beamer@subsectionentry {0}{5}{4}{31}{SLURM}}\headcommand {\beamer@subsectionpages {28}{30}}
-\headcommand {\slideentry {5}{4}{1}{31/31}{SLURM}{0}}
+\headcommand {\slideentry {5}{3}{3}{31/31}{Outputs}{0}}
 \headcommand {\beamer@framepages {31}{31}}
-\headcommand {\slideentry {5}{4}{2}{32/32}{SLURM}{0}}
+\headcommand {\beamer@subsectionentry {0}{5}{4}{32}{SLURM}}\headcommand {\beamer@subsectionpages {29}{31}}
+\headcommand {\slideentry {5}{4}{1}{32/32}{SLURM}{0}}
 \headcommand {\beamer@framepages {32}{32}}
-\headcommand {\slideentry {5}{4}{3}{33/33}{SLURM}{0}}
+\headcommand {\slideentry {5}{4}{2}{33/33}{SLURM}{0}}
 \headcommand {\beamer@framepages {33}{33}}
-\headcommand {\slideentry {5}{4}{4}{34/34}{SLURM}{0}}
+\headcommand {\slideentry {5}{4}{3}{34/34}{SLURM}{0}}
 \headcommand {\beamer@framepages {34}{34}}
-\headcommand {\sectionentry {6}{Additional remarks}{35}{Additional remarks}{0}}
-\headcommand {\beamer@sectionpages {26}{34}}
-\headcommand {\beamer@subsectionpages {31}{34}}
-\headcommand {\beamer@subsectionentry {0}{6}{1}{35}{Notes for Windows Users}}\headcommand {\beamer@subsectionpages {35}{34}}
-\headcommand {\slideentry {6}{1}{1}{35/35}{Notes for Windows Users}{0}}
+\headcommand {\slideentry {5}{4}{4}{35/35}{SLURM}{0}}
 \headcommand {\beamer@framepages {35}{35}}
-\headcommand {\beamer@subsectionentry {0}{6}{2}{36}{Software}}\headcommand {\beamer@subsectionpages {35}{35}}
-\headcommand {\slideentry {6}{2}{1}{36/36}{Software}{0}}
+\headcommand {\sectionentry {6}{Additional remarks}{36}{Additional remarks}{0}}
+\headcommand {\beamer@sectionpages {27}{35}}
+\headcommand {\beamer@subsectionpages {32}{35}}
+\headcommand {\beamer@subsectionentry {0}{6}{1}{36}{Notes for Windows Users}}\headcommand {\beamer@subsectionpages {36}{35}}
+\headcommand {\slideentry {6}{1}{1}{36/36}{Notes for Windows Users}{0}}
 \headcommand {\beamer@framepages {36}{36}}
-\headcommand {\beamer@subsectionentry {0}{6}{3}{37}{Best practices and advice}}\headcommand {\beamer@subsectionpages {36}{36}}
-\headcommand {\slideentry {6}{3}{1}{37/37}{Best practices and advice}{0}}
+\headcommand {\beamer@subsectionentry {0}{6}{2}{37}{Software}}\headcommand {\beamer@subsectionpages {36}{36}}
+\headcommand {\slideentry {6}{2}{1}{37/37}{Software}{0}}
 \headcommand {\beamer@framepages {37}{37}}
-\headcommand {\slideentry {6}{3}{2}{38/38}{Best practices and advice}{0}}
+\headcommand {\beamer@subsectionentry {0}{6}{3}{38}{Best practices and advice}}\headcommand {\beamer@subsectionpages {37}{37}}
+\headcommand {\slideentry {6}{3}{1}{38/38}{Best practices and advice}{0}}
 \headcommand {\beamer@framepages {38}{38}}
-\headcommand {\slideentry {6}{3}{3}{39/39}{Best practices and advice}{0}}
+\headcommand {\slideentry {6}{3}{2}{39/39}{Best practices and advice}{0}}
 \headcommand {\beamer@framepages {39}{39}}
-\headcommand {\beamer@partpages {1}{39}}
-\headcommand {\beamer@subsectionpages {37}{39}}
-\headcommand {\beamer@sectionpages {35}{39}}
-\headcommand {\beamer@documentpages {39}}
-\headcommand {\def \inserttotalframenumber {39}}
+\headcommand {\slideentry {6}{3}{3}{40/40}{Best practices and advice}{0}}
+\headcommand {\beamer@framepages {40}{40}}
+\headcommand {\beamer@partpages {1}{40}}
+\headcommand {\beamer@subsectionpages {38}{40}}
+\headcommand {\beamer@sectionpages {36}{40}}
+\headcommand {\beamer@documentpages {40}}
+\headcommand {\def \inserttotalframenumber {40}}

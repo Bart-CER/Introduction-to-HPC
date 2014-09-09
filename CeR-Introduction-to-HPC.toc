@@ -1,4 +1,4 @@
-\beamer@endinputifotherversion {3.24pt}
+\beamer@endinputifotherversion {3.26pt}
 \select@language {english}
 \beamer@sectionintoc {1}{About Us}{3}{0}{1}
 \beamer@subsectionintoc {1}{1}{About CeR and NeSI}{3}{0}{1}
@@ -9,19 +9,19 @@
 \beamer@subsectionintoc {2}{3}{Shared Memory}{9}{0}{2}
 \beamer@subsectionintoc {2}{4}{Distributed Memory}{10}{0}{2}
 \beamer@sectionintoc {3}{Our Facilities}{11}{0}{3}
-\beamer@sectionintoc {4}{Using the Cluster}{15}{0}{4}
-\beamer@subsectionintoc {4}{1}{Suitable Work}{15}{0}{4}
-\beamer@subsectionintoc {4}{2}{What to expect}{16}{0}{4}
-\beamer@subsectionintoc {4}{3}{Parallel speedup}{17}{0}{4}
-\beamer@subsectionintoc {4}{4}{General overview}{19}{0}{4}
-\beamer@subsectionintoc {4}{5}{Getting to the Login Node}{22}{0}{4}
-\beamer@subsectionintoc {4}{6}{Data}{25}{0}{4}
-\beamer@sectionintoc {5}{Submitting a Job}{26}{0}{5}
-\beamer@subsectionintoc {5}{1}{Documentation}{26}{0}{5}
-\beamer@subsectionintoc {5}{2}{Basic Job Properties}{27}{0}{5}
-\beamer@subsectionintoc {5}{3}{Outputs}{28}{0}{5}
-\beamer@subsectionintoc {5}{4}{SLURM}{31}{0}{5}
-\beamer@sectionintoc {6}{Additional remarks}{35}{0}{6}
-\beamer@subsectionintoc {6}{1}{Notes for Windows Users}{35}{0}{6}
-\beamer@subsectionintoc {6}{2}{Software}{36}{0}{6}
-\beamer@subsectionintoc {6}{3}{Best practices and advice}{37}{0}{6}
+\beamer@sectionintoc {4}{Using the Cluster}{16}{0}{4}
+\beamer@subsectionintoc {4}{1}{Suitable Work}{16}{0}{4}
+\beamer@subsectionintoc {4}{2}{What to expect}{17}{0}{4}
+\beamer@subsectionintoc {4}{3}{Parallel speedup}{18}{0}{4}
+\beamer@subsectionintoc {4}{4}{General overview}{20}{0}{4}
+\beamer@subsectionintoc {4}{5}{Getting to the Login Node}{23}{0}{4}
+\beamer@subsectionintoc {4}{6}{Data}{26}{0}{4}
+\beamer@sectionintoc {5}{Submitting a Job}{27}{0}{5}
+\beamer@subsectionintoc {5}{1}{Documentation}{27}{0}{5}
+\beamer@subsectionintoc {5}{2}{Basic Job Properties}{28}{0}{5}
+\beamer@subsectionintoc {5}{3}{Outputs}{29}{0}{5}
+\beamer@subsectionintoc {5}{4}{SLURM}{32}{0}{5}
+\beamer@sectionintoc {6}{Additional remarks}{36}{0}{6}
+\beamer@subsectionintoc {6}{1}{Notes for Windows Users}{36}{0}{6}
+\beamer@subsectionintoc {6}{2}{Software}{37}{0}{6}
+\beamer@subsectionintoc {6}{3}{Best practices and advice}{38}{0}{6}
