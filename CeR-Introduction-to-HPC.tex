@@ -109,7 +109,7 @@
 	\begin{itemize}
 		\item high performance computing
 		\item a national data storage and sharing service 
-		\item expert support, including engineering
+		\item expert support and knowledge sharing 
 		\item single-sign on across the NZ research sector
 	\end{itemize}
    \end{itemize}
@@ -121,13 +121,13 @@
   \frametitle{About Us}
 \begin{center}
 \vspace*{1cm}
- \includegraphics[width=225pt]{NeSI_img/nesi_logo.jpg}\\
- \includegraphics[width=50pt]{NeSI_img/logo-u-of-a.jpg}
- \includegraphics[width=50pt]{NeSI_img/logo-u-of-c.jpg}
- \includegraphics[width=50pt]{NeSI_img/logo-niwa.jpg}
- \includegraphics[width=50pt]{NeSI_img/logo-ministry-of-si.jpg} 
- \includegraphics[width=50pt]{NeSI_img/logo-manaaki-whenua.jpg}
- \includegraphics[width=50pt]{NeSI_img/logo-u-of-o.jpg}
+ \includegraphics[width=150pt]{NeSI_img/nesi_logo.jpg}\\
+ \includegraphics[width=70pt]{NeSI_img/logo-u-of-a.jpg}
+ \includegraphics[width=70pt]{NeSI_img/logo-u-of-c.jpg}
+ \includegraphics[width=70pt]{NeSI_img/logo-niwa.jpg}\\
+ \includegraphics[width=70pt]{NeSI_img/logo-ministry-of-si.jpg} 
+ \includegraphics[width=70pt]{NeSI_img/logo-manaaki-whenua.jpg}
+ \includegraphics[width=70pt]{NeSI_img/logo-u-of-o.jpg}
 \end{center}
 }
 
@@ -135,10 +135,10 @@
 \frame[t]
 {
   \frametitle{About Us}
-      \begin{block}{Computational Science Team}
+      \begin{block}{Our Team}
    \begin{itemize}%[<+-| alert@+>]
 	\item We support researchers to get the most out of our platforms and services.
-	\item The CS Team has a lot of experience in HPC that spans many science domains.
+	\item As a team, we have a lot of experience in HPC that spans many science domains.
 	\item Collaboratively enhance the performance of research software codes.
    \begin{itemize}
    	\item Troubleshoot memory and other or I/O bottlenecks.
@@ -179,15 +179,14 @@
 	  \begin{block}{What is a cluster}
       \begin{itemize}%[<+-| alert@+>]
 	    \item A cluster is a network of computers, sometimes called nodes or hosts.
-	    \item Each computer has several processors.
-	    \item Each processor has several cores.
-	    \item A core does the computing.
-	    \item If your application uses more than one core, it can run faster on our cluster.
+	    \item Each node has several CPUs (or cores). 
+	    \item A CPU does the computing.
+	    \item If your application uses more than one CPU, it can run faster on our cluster.
       \end{itemize}
       \end{block}
       \end{column}
       \begin{column}{0.4\textwidth}
-      \includegraphics[width=140pt]{NeSI_img/node_view.png}
+      \includegraphics[width=140pt]{NeSI_img/hybrid_mem.png}
       \end{column}
    \end{columns}
 }
@@ -212,8 +211,8 @@
   \frametitle{Key Concepts}
       \begin{block}{Parallel Programming}
    \begin{itemize}%[<+-| alert@+>]
-	\item There are several ways to make a program use more cores and hence run faster.
-	\item Many scientific software applications are written to take advantage of multiple cores in some way. But often this must be specifically requested by the user at the time he runs the program, rather than happening automagically.
+	\item There are several ways to make a program use more CPUs and hence run faster.
+	\item Many scientific software applications are written to take advantage of multiple CPUs in some way. But often this must be specifically requested by the user at the time he runs the program, rather than happening automagically.
 	\item We can help you improve the performance of your code or make better use of your application.
    \end{itemize}
   \end{block}
@@ -251,8 +250,6 @@
 %}
 
 
-\subsection{Distributed Memory}
-
 \frame[t]
 {
   \frametitle{Key Concepts}
@@ -270,21 +267,12 @@
   \end{block}
 }
 
+\frame{
+\frametitle{GPU and Phi computing}
 
-%\frame[t]
-%{
-%  \frametitle{Key Concepts}
-%      \begin{block}{Hybrid Case : MPI+OpenMP}
-%   \begin{itemize}%[<+-| alert@+>]
-%	\item The application opens several MPI instances (one or more in each node) 
-%	\item Each MPI instance runs OpenMP threads
-%	\item Typically one MPI instance per Socket and one OpenMP Thread per core.
-%   \end{itemize}
-%\begin{center}
-% \includegraphics[width=170pt]{NeSI_img/hybrid_mem.png}
-%\end{center}
-%  \end{block}
-%}
+Add content here...
+}
+
 
 \section{Our Facilities}
 \subsection{}
@@ -298,6 +286,7 @@
 	    \item Power6 and Power7
    		\item Intel Westmere
 		\item Intel SandyBridge
+		\item Intel IvyBridge \vspace{0.5cm}
 		\item Kepler and Fermi GPU servers
 		\item Intel Xeon Phi Co-Processor
    \end{itemize}
@@ -321,8 +310,8 @@
       \begin{block}{Pan, the NeSI CeR Supercomputing Centre}
    \begin{itemize}%[<+-| alert@+>]
 	\item Funded by the \textbf{University of Auckland}, \textbf{Landcare Research} and the \textbf{University of Otago} with co-investment from the NZ Government through \textbf{NeSI}.
-	\item Currently have around 5,000 Intel CPU cores across about 300 hosts.
-	\item About 3.5 TB of memory and 80 TFLOPs (distributed).
+	\item Currently have around 6000 Intel CPUs across about 400 hosts.
+	\item About 50 TB of memory.
 	\item Shared storage of 400 TB with a 40 Gbit/s InfiniBand network.
 	\item Runs Red Hat Enterprise Linux 6.3 as the operating system.
    \end{itemize}
@@ -335,69 +324,26 @@
       \begin{block}{NeSI Pan Cluster}
       \begin{center}
        \begin{small}
-      \begin{tabular}{|c|c|c|c|}
+      \begin{tabular}{|c|c|c|c|c|}
       \hline 
-      \textbf{Architecture} & \textbf{Westmere} & \textbf{SandyBridge} & \textbf{LargeMem} \\ 
+      \textbf{Architecture} & \textbf{Westmere} & \textbf{SandyBridge} & \textbf{IvyBridge}& \textbf{LargeMem} \\ 
       \hline 
-      Model & X5660 & E5-2680 & E7-4870 \\ 
+      Clock Speed & 2.8\,GHz & 2.7\,GHz& 2.7\,GHz & 2.4\,GHz \\ 
       \hline 
-      Clock Speed & 2.8 GHz & 2.7 GHz & 2.4GHz \\ 
-      \hline 
-      Cache & 12MB & 20MB & 30MB \\ 
-      \hline 
-      Intel QPI speed & 6.4GT/s & 8 GT/s & 6.4GT/ \\ 
-      \hline 
-      Cores/socket & 6 & 8 & 10 \\ 
+      CPUs/socket & 6 & 8 & 12 &10 \\ 
       \hline       
-      Cores/node & 12 & 16 & 40 \\ 
+      CPUs/node & 12 & 16 & 24 &40 \\ 
       \hline 
-      Mem/node & 96GB & 128GB & 512GB \\ 
+      Mem/node & 96\,GB & 128\,GB &  128/256\,GB& 512\,GB \\ 
       \hline 
-      GFLOPS/node & 134.4 & 345.6 & 384.0 \\ 
-      \hline 
-      \# nodes & 76 & 194 & 4 \\ 
+      \# nodes & 76 & 194 & 42 &4 \\ 
       \hline 
       \end{tabular} 
       \end{small}
       \end{center}
   \end{block}
+  More information on the documentation page under \textsl{Available hardware.}
 }
-\frame[t]
-{
-  \frametitle{Our Facilities}
-      \begin{block}{NeSI Pan Cluster - Co-Processors}
-      \begin{center}
-       \begin{small}
-      \begin{tabular}{|c|c|c|c|}
-      \hline 
-      \textbf{Architecture} & \textbf{Nvidia Fermi} & \textbf{Nvidia Kepler} & \textbf{Intel Phi} \\ 
-      \hline 
-      Main CPU                  &  X5660/E5-2680       &  E5-2680                   &  E5-2680 \\
-      \hline 
-      Model                       &  M2090                     &   K20X                       &  5110P \\ 
-      \hline 
-      Clock Speed             &  1.3GHz                    &  0.732GHz                      &  1.053GHz\\ 
-      \hline 
-%      Cache                      & 12MB                        & 12MB                          & 12MB  \\ 
-%      \hline  
-%      Intel QPI speed        & 6.4GT/s                   & 6.4GT/s                       & 6.4GT/s  \\ 
-%      \hline 
-      Cores/Dev.             & 512                            & 2688                           & 60 (240) \\ 
-      \hline       
-      Dev./node              &  2                             &   2                                &  2  \\ 
-      \hline 
-      Mem/Dev.             & 6GB                          & 6GB                               & 8GB  \\ 
-      \hline 
-      TFLOPS/Dev         & 1.33                          & 1.17                              & 1.01 \\ 
-      \hline 
-      \# nodes               & 16                             & 5                                 & 2 \\ 
-      \hline 
-      \end{tabular} 
-      \end{small}
-      \end{center}
-  \end{block}
-}
-
 \section{Using the Cluster}      
 
 \subsection{Suitable Work}
@@ -446,7 +392,7 @@
     \end{center}
     \end{block}
 \column{0.5\textwidth}
-     \begin{block}{Real Case: more cores $\neq$ more speed}
+     \begin{block}{Real Case: more CPUs $\neq$ more speed}
    \begin{center}
    \includegraphics[width=160pt]{NeSI_img/migrate_scalability.png}
    \end{center}
@@ -458,15 +404,15 @@
 {
    \begin{block}{Parallel execution time}
    \begin{itemize}%[<+-| alert@+>]
-	\item Single core computation time: computation only.
+	\item Single CPU computation time: computation only.
 	\item Parallel computation time: computation + communication + waiting.
 	\item For example:
 	\begin{itemize}
 	\item Writing results (to one file) is often a bottleneck.
 	\item Small problem on many cores: communication costs will dominate.
-	\item Unbalanced load: one slow core will hold up all the others.
+	\item Unbalanced load: one slow CPU will hold up all the others.
 	\end{itemize}
-	\item Conclusion: Test which number of cores is best suited for your problem. 
+	\item Conclusion: Test which number of CPUs is best suited for your problem. 
    \end{itemize}
   \end{block}
 
@@ -534,30 +480,7 @@
 }
 
 
-\frame[t]
-{
-  \frametitle{Using the Cluster}
-  \begin{block}{Each NeSI Supercomputing Centre has one or more Login Nodes}
-   \begin{itemize}%[<+-| alert@+>]
-	\item \textbf{CeR}
-	   \begin{itemize}%[<+-| alert@+>]
-	    \item {\url{login.uoa.nesi.org.nz}}, the Red Hat login node.
-	    %\item visual.uoa.nesi.org.nz  which is the Visualization Cluster login node.
-       \end{itemize}
-	\item \textbf{BlueFern}
-	   \begin{itemize}%[<+-| alert@+>]
-	    \item {\url{kerr.canterbury.ac.nz}}, the AIX login node.
-	    \item {\url{beatrice.canterbury.ac.nz}}, the SUSE Linux login node.
-	    \item {\url{foster.canterbury.ac.nz}}, the BlueGene/P login node
-	    \item {\url{popper.canterbury.ac.nz}}, the Visualization Cluster login node.
-   \end{itemize}
-   	\item \textbf{NIWA}
-	   \begin{itemize}%[<+-| alert@+>]
-	    \item {\url{fitzroy.nesi.org.nz}}, the AIX login node.
-      \end{itemize}
-   \end{itemize}
-  \end{block}
-}
+
 
 
 \begin{frame}[fragile]
@@ -644,7 +567,7 @@
 	%\item \textbf{Command} What command to execute on the cluster e.g "echo hello"
 	\item \textbf{Walltime}: How long can the job run for? The job will be killed if it runs out of time. 
 	\item \textbf{Memory}: How much to use? The job will die if it needs more memory than you allow.
-	\item \textbf{CPU cores}: How many to use? Some programs try to use more cores than they are allocated, e.g.\ MATLAB.
+	\item \textbf{CPUs}: How many to use? Some programs try to use more CPUs than they are allocated, e.g.\ MATLAB.
 	%\item \textbf{Files} You need to specify where additional files can be found and change references in your scripts
 	\item \textbf{Account information}: Especially important for access to funded research allocations
 	\item \textbf{Emails}: Whom, and in what circumstances, the scheduler will notify about changes to the job status.
@@ -732,7 +655,7 @@
 #SBATCH -J MySerialJob
 #SBATCH -A uoa99999         # Project Account
 #SBATCH --time=01:00:00     # Walltime
-#SBATCH --mem-per-cpu=4096  # Memory per core (in MB)
+#SBATCH --mem-per-cpu=4GB  # Memory per CPU 
 
 srun cat ~/inputfile.txt
 \end{verbatim}
@@ -752,7 +675,7 @@ srun cat ~/inputfile.txt
 #SBATCH -A uoa99999         # Project Account
 #SBATCH --time=01:00:00     # Walltime
 #SBATCH --ntasks=2          # number of tasks
-#SBATCH --mem-per-cpu=4096  # Memory per core (in MB)
+#SBATCH --mem-per-cpu=4GB  # Memory per CPU
 
 module load myModule
 srun mpi_binary
@@ -770,7 +693,8 @@ srun mpi_binary
    \begin{block}{Slurm}
      \begin{itemize}%[<+-| alert@+>]
 	\item To submit a job:\\ \begin{verbatim} sbatch myJob.sl \end{verbatim}
-	\item To monitor your jobs:\\ \begin{verbatim} squeue –u <myUserId>\end{verbatim}
+	\item To monitor your jobs:\\ \begin{verbatim} squeue –u <myUserId>\end{verbatim}\\ 
+	  \begin{verbatim} squ \end{verbatim}
 	\item To cancel:\\ \begin{verbatim} scancel <jobId>\end{verbatim}
      \end{itemize}
   \end{block}
@@ -778,8 +702,6 @@ srun mpi_binary
 
 
 \section{Additional remarks}
-
-\subsection{Notes for Windows Users}
 
 \frame[t]
 {
@@ -798,7 +720,6 @@ srun mpi_binary
 
 
 
-\subsection{Software}
 \frame[t]
 {
   \frametitle{Software}
@@ -819,7 +740,21 @@ srun mpi_binary
   \end{block}
 }
 
-\subsection{Best practices and advice}
+\frame[t]{
+\frametitle{How to ask a question}
+\begin{itemize}
+ \item Mention your UPI and project code.
+ \item What command(s) exactly did you execute? 
+ \item What is the error that is printed to the screen? (Did you read it yourself?)
+ \item If your job failed:
+  \begin{itemize}
+    \item What was the job-id?
+    \item Which SLURM file did you use? (full path)
+    \item Does it work on the build node? 
+  \end{itemize}
+\end{itemize}
+
+}
 
 \frame[t]
 {

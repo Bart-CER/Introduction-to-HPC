@@ -3,7 +3,8 @@
    \begin{block}{Slurm}
      \begin{itemize}%[<+-| alert@+>]
 \item To submit a job:\\ \begin{verbatim} sbatch myJob.sl \end{verbatim}
-\item To monitor your jobs:\\ \begin{verbatim} squeue –u <myUserId>\end{verbatim}
+\item To monitor your jobs:\\ \begin{verbatim} squeue –u <myUserId>\end{verbatim}\\
+  \begin{verbatim} squ \end{verbatim}
 \item To cancel:\\ \begin{verbatim} scancel <jobId>\end{verbatim}
      \end{itemize}
   \end{block}
