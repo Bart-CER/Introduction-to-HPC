@@ -93,7 +93,6 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \section{About Us}
-\subsection{About CeR and NeSI}
 \frame[t]
 {
   \frametitle{About Us}
@@ -131,7 +130,6 @@
 \end{center}
 }
 
-\subsection{The CS Team}
 \frame[t]
 {
   \frametitle{About Us}
@@ -168,7 +166,6 @@
 
 
 \section{Key Concepts}
-\subsection{What is a Cluster}
 \frame[t]
 {
   \frametitle{Key Concepts}
@@ -205,7 +202,6 @@
 % \end{center}
 % }
 
-\subsection{Parallel Programming}
 \frame[t]
 {
   \frametitle{Key Concepts}
@@ -218,7 +214,6 @@
   \end{block}
 }
 
-\subsection{Shared Memory}
 \frame[t]
 {
   \frametitle{Key Concepts}
@@ -267,15 +262,8 @@
   \end{block}
 }
 
-\frame{
-\frametitle{GPU and Phi computing}
-
-Add content here...
-}
-
 
 \section{Our Facilities}
-\subsection{}
 \frame[t]
 {
   \frametitle{Our Facilities}
@@ -342,11 +330,10 @@ Add content here...
       \end{small}
       \end{center}
   \end{block}
-  More information on the documentation page under \textsl{Available hardware.}
+  We also have GPUs and Intel Xeon Phi's available. More information on the documentation page under \textsl{Available hardware.}
 }
 \section{Using the Cluster}      
 
-\subsection{Suitable Work}
 \frame[t]
 {
   \frametitle{What to expect}
@@ -360,12 +347,11 @@ Add content here...
         \begin{block}{Less suited}
    \begin{itemize}%[<+-| alert@+>]
 	\item Windows-only software $\mapsto$ Aspirational Research Virtual Machine Farm. 
-	\item Interactive software, e.g.\ GUI, only available for development. 
+	\item Interactive software, e.g.\ GUI, only available for development (in general).
    \end{itemize}
   \end{block}
 }
 
-\subsection{What to expect}
 
 \frame[t]
 {
@@ -380,7 +366,6 @@ Add content here...
   \end{block}
 }
 
-\subsection{Parallel speedup}
 
 \frame[t]
 {
@@ -420,7 +405,6 @@ Add content here...
 
 
 
-\subsection{General overview}
 \frame[t]
 {
   \frametitle{General overview}
@@ -463,8 +447,6 @@ Add content here...
 }
 
 
-
-\subsection{Getting to the Login Node}
 \frame[t]
 {
   \frametitle{Using the Cluster}
@@ -489,35 +471,17 @@ Add content here...
        In order to access the file system (/home) remotely from your machine, we recommend:
         \begin{itemize}
         \item \textbf{Windows} (mobaxterm): \href{http://mobaxterm.mobatek.net/}{mobaxterm}
-        \item \textbf{Windows} (SSHFS): \url{http://code.google.com/p/win-sshfs/}
         \item \textbf{MacOSX} (SSHFS): \url{http://code.google.com/p/macfuse/}
         \item \textbf{Linux} (SSHFS): \url{http://fuse.sourceforge.net/sshfs.html}
+        \item \textbf{Linux} (scp): \url{https://linuxacademy.com/blog/linux/ssh-and-scp-howto-tips-tricks/}
         \item \textbf{KDE} (Konqueror): type fish://user@host:port
         \item \textbf{Gnome} (Nautilus): type sftp://user@host:port
       \end{itemize}
       \end{block}
 \end{frame}
 
-%\begin{frame}[fragile]
-%  \frametitle{Using the Cluster}
-%      \begin{block}{Remote File System Transfer with RSYNC (Unix Only)}
-%       \textbf{RSYNC} over SSH protocol is the best choice to transfer big data.
-%        \begin{itemize}
-%        \item Transfer data from your machine to the server:\\ {\small \verb|rsync -avHl  /path/origin/* sshserver:/path/destination/|}
-%        \item Transfer data from the server to your machine:\\ {\small \verb|rsync -avHl  sshserver:/path/destination/* /path/origin/|}
-%        \end{itemize}
-%      \end{block}
-%      \begin{block}{Remote File System Transfer with scp/sftp (Unix Only)}
-%       \textbf{SCP} and \textbf{SFTP} are the most popular software to transfer data across SSH protocol.
-%        \begin{itemize}
-%        \item {\small \verb|scp -pr sshserver:/path/origin/* path/destination/|}
-%        \item {\small \verb|sftp sshserver:/path/origin/* path/destination/|}
-%        \end{itemize}
-%      \end{block}      
-%\end{frame}
 
 
-\subsection{Data}
 \frame[t]
 {
   \frametitle{Using the Cluster}
@@ -537,27 +501,8 @@ Add content here...
 }
 
 \section{Submitting a Job}
-\subsection{Documentation}
-\frame[t]
-{
-  \frametitle{Submitting a Job}
-      \begin{block}{Documentation}
-   \begin{itemize}%[<+-| alert@+>]
-	\item Centre-specific documentation:
-	\begin{itemize}
-	\item Bluefern: \url{http://wiki.canterbury.ac.nz/display/BlueFern}
-	\item NIWA: \url{http://teamwork.niwa.co.nz/display/HPCF/NIWA+HPCF+User+Documentation}
-	\item CeR: \url{http://wiki.auckland.ac.nz/display/CER/}
-	\end{itemize}
-	\item Examples for submitting jobs are on our Wiki page 
-	\item See the ``Getting Started'' section
-	\item Take a look at the Quick Reference Guide: \url{http://goo.gl/ytbRWy}
-	\item You will also find links to available software on the cluster
-   \end{itemize}
-  \end{block}
-}
 
-\subsection{Basic Job Properties}
+
 \frame[t]
 {
   \frametitle{Submitting a Job}
@@ -576,9 +521,6 @@ Add content here...
 }
 
 
-
-
-\subsection{Outputs}
 \frame[t]
 {
   \frametitle{Submitting a Job}
@@ -626,7 +568,6 @@ Add content here...
 }
 
 
-\subsection{SLURM}
 \frame[t]
 {
   \frametitle{Submitting a Job}
@@ -742,10 +683,11 @@ srun mpi_binary
 
 \frame[t]{
 \frametitle{How to ask a question}
+\begin{block}{}
 \begin{itemize}
  \item Mention your UPI and project code.
  \item What command(s) exactly did you execute? 
- \item What is the error that is printed to the screen? (Did you read it yourself?)
+ \item What is the error that is printed to the screen?
  \item If your job failed:
   \begin{itemize}
     \item What was the job-id?
@@ -753,6 +695,7 @@ srun mpi_binary
     \item Does it work on the build node? 
   \end{itemize}
 \end{itemize}
+\end{block}
 
 }
 
@@ -794,26 +737,6 @@ srun mpi_binary
 }
 
 
-%\frame
-%{
-%\begin{center}
-% \includegraphics[width=200pt]{NeSI_img/kami23-doubtux.png}
-%\end{center}
-%}
-
-%\section{}
-%\frame[t]
-%{
-%  \frametitle{}
-%      \begin{block}{}
-%   \begin{itemize}%[<+-| alert@+>]
-%	\item 
-%	\item 
-%	\item 
-%	\item 
-%   \end{itemize}
-%  \end{block}
-%}
 
 {
 \setbeamertemplate{background canvas}{\includegraphics[height=0.99\paperheight]{NeSI_img/Slide00.png}} 
